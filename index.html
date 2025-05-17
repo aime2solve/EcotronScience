@@ -16,29 +16,28 @@
             background-color: #f4f4f4;
         }
         header {
-            background-image: url('./background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #00FFCC; /* Neon cyan with chlorophyll green hint */
-            text-align: center;
-            padding: 2rem;
-            text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8); /* Enhanced white shadow for pop */
-        }
-        header h1 {
-            margin: 0;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            letter-spacing: 2px;
-            color: #00FFCC; /* Explicitly set neon cyan-green */
-            animation: pulse 2.5s ease-in-out infinite; /* Slow, subtle pulse */
-        }
-        header p {
-            font-family: 'Roboto Slab', serif;
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-            color: #00FFCC; /* Explicitly set neon cyan-green */
-            animation: pulse 2.5s ease-in-out infinite; /* Apply pulse to subtitle */
-        }
+    background-image: url('./background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #00B395; /* Darker cyan-green */
+    text-align: center;
+    padding: 2rem;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8); /* White shadow for readability */
+}
+header h1 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #00B395; /* Darker cyan-green */
+    animation: pulse 4s ease-in-out infinite; /* Slower, subtle pulse */
+}
+header p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #00B395; /* Darker cyan-green, no pulse */
+}
         nav {
             background: #333;
             padding: 1rem;
@@ -152,13 +151,13 @@
             }
         }
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05); /* Subtle scale up */
-            }
-        }
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03); /* More subtle scale up */
+    }
+}
     </style>
 </head>
 <body>
