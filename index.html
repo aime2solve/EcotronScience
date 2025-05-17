@@ -16,10 +16,13 @@
             background-color: #f4f4f4;
         }
         header {
-            background: linear-gradient(to right, #2c3e50, #3498db);
+            background-image: url('./background.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
             padding: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Improve text readability */
         }
         header h1 {
             margin: 0;
@@ -255,9 +258,9 @@
             <!-- <button onclick="copyLetter()">Copy Letter to Clipboard</button> -->
             <p>Share this page on social media to spread the word!</p>
             <p>
-                <a href="https://twitter.com/intent/tweet?text=Support%20ecotron%20research%20for%20a%20better%20future!%20Learn%20more%20at%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" class="cta-button">Share on X</a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://aime2solve.github.io/EcotronScience" class="cta-button">Share on Facebook</a>
-                <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20for%20a%20better%20future!%20Learn%20more%20at%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" class="cta-button">Share on BlueSky</a>
+                <a href="https://twitter.com/intent/tweet?text=Support%20ecotron%20research%20for%20a%20better%20future!%20Learn%20more%20at%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" target="_blank" rel="noopener" class="cta-button">Share on X</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://aime2solve.github.io/EcotronScience" target="_blank" rel="noopener" class="cta-button">Share on Facebook</a>
+                <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20for%20a%20better%20future!%20Learn%20more%20at%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" target="_blank" rel="noopener" class="cta-button">Share on BlueSky</a>
             </p>
             <div class="foundations">
                 <p>These foundations fund innovative ecological science and could support ecotron research:</p>
@@ -323,7 +326,7 @@
             navigator.clipboard.write(letterText).then(() => {
                 alert('Letter copied to clipboard!');
             }).catch(err => {
-_MAGENTA                alert('Failed to copy letter: ' + err);
+                alert('Failed to copy letter: ' + err);
             });
         }
         */
