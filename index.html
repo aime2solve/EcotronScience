@@ -21,8 +21,13 @@
             background-position: center;
             color: #FFD700; /* Bright gold */
             text-align: center;
-            padding: 2rem;
+            padding: 4rem 2rem; /* Increased vertical padding */
             position: relative; /* For overlay */
+            min-height: 300px; /* Taller banner */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         header::before {
             content: '';
@@ -186,6 +191,10 @@
             width: 100%;
         }
         @media (max-width: 600px) {
+            header {
+                min-height: 200px; /* Smaller height for mobile */
+                padding: 2rem 1rem; /* Reduced padding */
+            }
             header h1 {
                 font-size: 2rem;
             }
@@ -218,6 +227,7 @@
         <a href="#what">What Are Ecotrons?</a>
         <a href="#why">Why They Matter</a>
         <a href="#support">Support</a>
+        <a href="#articles">More Info</a>
     </nav>
 
     <div class="container">
@@ -243,8 +253,7 @@
         <!-- Call to Action: Support Ecotrons -->
         <div class="section" id="support">
             <h2>Support Ecotron Research</h2>
-            <p>Genetic engineering and synthetic biology will require far more public support to be fully realized. Without funding and public trust, we risk losing tools to tackle environmental problems, ensure safe biotechnologies, and advance space exploration. Private foundations that support environmental stewardship could help fund ecotron science, too. Select your state below to personalize a letter to your senators and help champion ecotrons!</p>
-
+            <p>Genetic engineering and synthetic biology will require far more public support to be fully realized. Without funding and public trust, we risk losing tools to tackle environmental problems, ensure safe biotechnologies, and advance space exploration. Private foundations that support environmental stewardship might be persuaded to support ecotron research and the development of a more robust approval process. Select your state below to personalize a letter to your senators and help champion ecotrons!</p>
             <div class="state-form">
                 <select id="stateSelect">
                     <option value="">Select your state</option>
@@ -317,10 +326,10 @@
             <!-- <button onclick="copyLetter()">Copy Letter to Clipboard</button> -->
             <p>Share this page on social media to spread the word!</p>
             <p>
-    <a href="https://twitter.com/intent/tweet?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration!%20Learn%20more:%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" target="_blank" rel="noopener" class="cta-button">Share on X</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://aime2solve.github.io/EcotronScience&quote=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration!%20Learn%20more:%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" target="_blank" rel="noopener" class="cta-button">Share on Facebook</a>
-    <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration!%20Learn%20more:%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" target="_blank" rel="noopener" class="cta-button">Share on BlueSky</a>
-</p>
+                <a href="https://twitter.com/intent/tweet?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration!%20Learn%20more:%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" target="_blank" rel="noopener" class="cta-button">Share on X</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://aime2solve.github.io/EcotronScience&quote=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration!%20Learn%20more:%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" target="_blank" rel="noopener" class="cta-button">Share on Facebook</a>
+                <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration!%20Learn%20more:%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" target="_blank" rel="noopener" class="cta-button">Share on BlueSky</a>
+            </p>
             <div class="foundations">
                 <p>These foundations fund innovative ecological science and might be persuaded to support ecotron research and the development of a more robust approval process:</p>
                 <ul>
