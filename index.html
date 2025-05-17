@@ -44,14 +44,14 @@
             z-index: 2; /* Above overlay */
         }
         header h1 {
-            margin: 0;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            letter-spacing: 2px;
-            color: #FFD700; /* Bright gold */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8); /* Dark shadow + white glow */
-            animation: pulse 6s ease-in-out infinite; /* Slower pulse */
-        }
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #FFD700; /* Bright gold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8); /* Dark shadow + white glow */
+    animation: pulse 19s ease-in-out infinite; /* 19s for 4-7-8 cycle */
+}
         header p {
             font-family: 'Roboto Slab', serif;
             font-size: 1.2rem;
@@ -199,13 +199,19 @@
             }
         }
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.03); /* More subtle scale up */
-            }
-        }
+    0% {
+        transform: scale(1);
+    }
+    21.05% { /* 4s / 19s */
+        transform: scale(1.03);
+    }
+    57.89% { /* (4s + 7s) / 19s */
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
     </style>
 </head>
 <body>
@@ -308,7 +314,7 @@
                 <p>I’m writing to urge your support for ecotron research, a critical tool for solving environmental challenges while ensuring the safe and ethical use of biotechnology. Ecotrons are controlled-environment labs that mimic real ecosystems — like forests, grasslands, and marine habitats — in a way that lets scientists study climate change factors, pollution, or new biotechnologies with precision and safety.</p>
                 <p>Why does this matter? Ecotrons help us test solutions, like cleaning up pollutants, or growing food sustainably, while minimizing risks to our planet. They are also key to exploring life support systems for future space habitats. Most importantly, ecotrons provide transparent, rigorous data to address concerns about genetic engineering. Some fear that altering DNA is playing God, but ecotrons let us study these technologies in contained settings, ensuring safety and building trust through open science.</p>
                 <p>Without public support, this vital research could lose funding or face bans, halting progress on environmental solutions and space exploration. Ecotrons are our safeguard — a way to innovate responsibly while respecting ethical concerns.</p>
-                <p>Please champion federal funding and policies that support ecotron research facilities. Desert landscapes provide the highest containment. Let’s keep science moving forward for a healthier planet and a brighter future.</p>
+                <p>Please champion federal funding and policies that support ecotron research facilities. Desert landscapes provide the highest containment, so Desert Research Institute's EcoCells in Reno, NV, the Environmental Molecular Sciences Laboratory in Richland, WA, and the University of Arizona's ecotron campus in Oracle, AZ could be the seed points for a larger network. Let’s keep science moving forward for a healthier planet and a brighter future.</p>
                 <p>Sincerely,<br>[Your Name]</p>
             </div>
             <div class="senator-links" id="senatorLinks">
