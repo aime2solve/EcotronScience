@@ -242,7 +242,7 @@
             <div class="letter" id="letter">
                 <p><strong>Subject:</strong> Support Ecotron Research to Advance Science</p>
                 <p id="salutation">Dear [Senator’s Name],</p>
-                <p>I’m writing to urge your support for ecotron research, a critical tool for solving environmental challenges while ensuring the safe and ethical use of biotechnology. Ecotrons are advanced,radical thinking, controlled-environment labs that mimic real ecosystems—like forests, grasslands, and marine habitats—in a way that lets scientists study climate change, pollution, or new biotechnologies with precision and safety.</p>
+                <p>I’m writing to urge your support for ecotron research, a critical tool for solving environmental challenges while ensuring the safe and ethical use of biotechnology. Ecotrons are advanced, radical thinking, controlled-environment labs that mimic real ecosystems—like forests, grasslands, and marine habitats—in a way that lets scientists study climate change, pollution, or new biotechnologies with precision and safety.</p>
                 <p>Why does this matter? Ecotrons help us test solutions, like cleaning up pollutants or growing food sustainably, without risking our planet. They’re also key to exploring life support systems for future space habitats. Most importantly, ecotrons provide transparent, rigorous data to address concerns about genetic engineering. Some fear that altering DNA is playing God, but ecotrons let us study these technologies in contained settings, ensuring safety and building trust through open science.</p>
                 <p>Without public support, this vital research could lose funding or face bans, halting progress on environmental solutions and space exploration. Ecotrons are our safeguard—a way to innovate responsibly while respecting ethical concerns.</p>
                 <p>Please champion federal funding and policies that support ecotron research facilities. Let’s keep science moving forward for a healthier planet and a brighter future.</p>
@@ -252,6 +252,7 @@
                 <!-- Senator links will be dynamically inserted here -->
             </div>
             <p>Copy the letter above and paste it into your senators’ contact forms linked below.</p>
+            <!-- <button onclick="copyLetter()">Copy Letter to Clipboard</button> -->
             <p>Share this page on social media to spread the word!</p>
             <p>
                 <a href="https://twitter.com/intent/tweet?text=Support%20ecotron%20research%20for%20a%20better%20future!%20Learn%20more%20at%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" class="cta-button">Share on X</a>
@@ -259,18 +260,18 @@
                 <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20for%20a%20better%20future!%20Learn%20more%20at%20https://aime2solve.github.io/EcotronScience%20%23EcotronScience" class="cta-button">Share on BlueSky</a>
             </p>
             <div class="foundations">
-                <p>Private foundations supporting ecological science:</p>
+                <p>These foundations fund innovative ecological science and could support ecotron research:</p>
                 <ul>
-                    <li><a href="https://www.wellcome.org">Wellcome Trust</a> ($46.4B)</li>
-                    <li><a href="https://www.hhmi.org">Howard Hughes Medical Institute</a> ($27.1B)</li>
-                    <li><a href="https://www.bezosearthfund.org">Bezos Earth Fund</a> ($10B pledged)</li>
-                    <li><a href="https://www.wkkf.org">W.K. Kellogg Foundation</a> ($8.7B)</li>
-                    <li><a href="https://www.packard.org">David and Lucile Packard Foundation</a> ($7.1B)</li>
-                    <li><a href="https://www.moore.org">Gordon and Betty Moore Foundation</a> ($6.1B)</li>
-                    <li><a href="https://www.muskfoundation.org">Musk Foundation</a> ($5B estimated)</li>
-                    <li><a href="https://www.mott.org">Charles Stewart Mott Foundation</a> ($3.7B)</li>
-                    <li><a href="https://www.simonsfoundation.org">Simons Foundation</a> ($3.3B)</li>
-                    <li><a href="https://www.hsfoundation.org">Heising-Simons Foundation</a> ($1.4B)</li>
+                    <li><a href="https://www.wellcome.org" target="_blank" rel="noopener">Wellcome Trust</a> ($46.4B)</li>
+                    <li><a href="https://www.hhmi.org" target="_blank" rel="noopener">Howard Hughes Medical Institute</a> ($27.1B)</li>
+                    <li><a href="https://www.bezosearthfund.org" target="_blank" rel="noopener">Bezos Earth Fund</a> ($10B pledged)</li>
+                    <li><a href="https://www.wkkf.org" target="_blank" rel="noopener">W.K. Kellogg Foundation</a> ($8.7B)</li>
+                    <li><a href="https://www.packard.org" target="_blank" rel="noopener">David and Lucile Packard Foundation</a> ($7.1B)</li>
+                    <li><a href="https://www.moore.org" target="_blank" rel="noopener">Gordon and Betty Moore Foundation</a> ($6.1B)</li>
+                    <li><a href="https://www.muskfoundation.org" target="_blank" rel="noopener">Musk Foundation</a> ($5B estimated)</li>
+                    <li><a href="https://www.mott.org" target="_blank" rel="noopener">Charles Stewart Mott Foundation</a> ($3.7B)</li>
+                    <li><a href="https://www.simonsfoundation.org" target="_blank" rel="noopener">Simons Foundation</a> ($3.3B)</li>
+                    <li><a href="https://www.hsfoundation.org" target="_blank" rel="noopener">Heising-Simons Foundation</a> ($1.4B)</li>
                 </ul>
             </div>
         </div>
@@ -311,14 +312,21 @@
                 linksHtml += '</ul>';
                 document.getElementById('senatorLinks').innerHTML = linksHtml;
             } else {
-                alert('Senator data for this state is not yet available. Please visit https://www.senate.gov/senators/senators-contact.htm to find your pyspark.sql.functions import col, when, lit
-from pyspark.sql import SparkSession
-spark = SparkSession.builder.appName("EcotronAnalysis").getOrCreate()
-df = spark.read.csv("ecotron_data.csv", header=True, inferSchema=True)
-df = df.withColumn("Status", when(col("CO2_Level") > 400, "High").otherwise("Normal"))
-df_filtered = df.filter(col("Temperature") < 25)
-df_grouped = df.groupBy("Ecosystem_Type").agg({"CO2_Level": "avg"})
-df_with_flag = df.withColumn("Alert", when((col("CO2_Level") > 450) & (col("Temperature") > 20), 1).otherwise(0))
-df_with_flag.write()
-df_with_flag.repartition(4).write.mode("overwrite").parquet("processed_ecotron_data")
-spark.stop()
+                alert('Senator data for this state is not yet available. Please visit https://www.senate.gov/senators/senators-contact.htm to find your senators.');
+            }
+        }
+
+        // Optional: Copy letter to clipboard (uncomment to enable)
+        /*
+        function copyLetter() {
+            const letterText = document.getElementById('letter').innerText;
+            navigator.clipboard.write(letterText).then(() => {
+                alert('Letter copied to clipboard!');
+            }).catch(err => {
+_MAGENTA                alert('Failed to copy letter: ' + err);
+            });
+        }
+        */
+    </script>
+</body>
+</html>
