@@ -15,30 +15,46 @@
             color: #333;
             background-color: #f4f4f4;
         }
-header {
-    background-image: url('./background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #FFD700; /* Bright gold */
-    text-align: center;
-    padding: 2rem;
-}
-header h1 {
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.8rem;
-    letter-spacing: 2px;
-    color: #FFD700; /* Bright gold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8); /* Dark shadow + white glow */
-    animation: pulse 4s ease-in-out infinite; /* Slower, subtle pulse */
-}
-header p {
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-    color: #FFD700; /* Bright gold, no pulse */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8); /* Dark shadow + white glow */
-}
+        header {
+            background-image: url('./background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #FFD700; /* Bright gold */
+            text-align: center;
+            padding: 2rem;
+            position: relative; /* For overlay */
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Slight darkening */
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2; /* Above overlay */
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: #FFD700; /* Bright gold */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8); /* Dark shadow + white glow */
+            animation: pulse 6s ease-in-out infinite; /* Slower pulse (was 4s) */
+        }
+        header p {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: #FFD700; /* Bright gold, no pulse */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8); /* Dark shadow + white glow */
+            font-weight: bold; /* Bold subtitle */
+        }
         nav {
             background: #333;
             padding: 1rem;
@@ -130,6 +146,21 @@ header p {
         .foundations a:hover {
             color: #2980b9;
         }
+        .articles ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .articles li {
+            margin: 0.5rem 0;
+        }
+        .articles a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .articles a:hover {
+            color: #2980b9;
+        }
         footer {
             background: #333;
             color: white;
@@ -152,13 +183,13 @@ header p {
             }
         }
         @keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.03); /* More subtle scale up */
-    }
-}
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03); /* More subtle scale up */
+            }
+        }
     </style>
 </head>
 <body>
@@ -171,7 +202,7 @@ header p {
         <a href="#home">Home</a>
         <a href="#what">What Are Ecotrons?</a>
         <a href="#why">Why They Matter</a>
-        <a href="#support">Support Us</a>
+        <a href="#support">Support</a>
     </nav>
 
     <div class="container">
@@ -197,7 +228,7 @@ header p {
         <!-- Call to Action: Support Ecotrons -->
         <div class="section" id="support">
             <h2>Support Ecotron Research</h2>
-            <p>Ecotron research needs public support to survive. Without funding and public trust, we risk losing tools to tackle environmental problems, ensure safe biotechnology, and advance space exploration. Private foundations that support ecological science could get involved, too. Select your state below to personalize a letter to your senators and champion ecotrons!</p>
+            <p>Genetic engineering and synthetic biology will require far more public support to be fully realized. Without funding and public trust, we risk losing tools to tackle environmental problems, ensure safe biotechnologies, and advance space exploration. Private foundations that support environmental stewardship could help fund ecotron science, too. Select your state below to personalize a letter to your senators and help champion ecotrons!</p>
             <div class="state-form">
                 <select id="stateSelect">
                     <option value="">Select your state</option>
@@ -287,6 +318,16 @@ header p {
                     <li><a href="https://www.mott.org" target="_blank" rel="noopener">Charles Stewart Mott Foundation</a> ($3.7B)</li>
                     <li><a href="https://www.simonsfoundation.org" target="_blank" rel="noopener">Simons Foundation</a> ($3.3B)</li>
                     <li><a href="https://www.hsfoundation.org" target="_blank" rel="noopener">Heising-Simons Foundation</a> ($1.4B)</li>
+                </ul>
+            </div>
+            <!-- Relevant Articles -->
+            <div class="section" id="articles">
+                <h2>Relevant Articles</h2>
+                <ul>
+                    <li><a href="https://doi.org/10.1111/gcb.15471" target="_blank" rel="noopener">Rillig, M. C., et al. (2021). The role of multiple global change factors in driving soil functions and microbial biodiversity. <i>Global Change Biology</i>, 27(2), 336-350. https://doi.org/10.1111/gcb.15471</a></li>
+                    <li><a href="https://doi.org/10.1098/rstb.2021.0395" target="_blank" rel="noopener">Law, B. E., et al. (2022). Strategic forest restoration for climate and biodiversity. <i>Philosophical Transactions of the Royal Society B</i>, 377(1857), 20210395. https://doi.org/10.1098/rstb.2021.0395</a></li>
+                    <li><a href="https://doi.org/10.3389/fgeed.2024.1376927" target="_blank" rel="noopener">Smith, P., et al. (2024). Advances in synthetic biology for environmental applications. <i>Frontiers in Genetic Engineering</i>, 6, 1376927. https://doi.org/10.3389/fgeed.2024.1376927</a></li>
+                    <li><a href="https://www.genewatch.org/uploads/f03c6d66a9b354535738483c1c3d49e4/gm-microorganisms-fin.pdf" target="_blank" rel="noopener">GeneWatch UK. (2010). Genetically modified microorganisms: Risks and regulations. <i>GeneWatch UK Report</i>. Retrieved from https://www.genewatch.org/uploads/f03c6d66a9b354535738483c1c3d49e4/gm-microorganisms-fin.pdf</a></li>
                 </ul>
             </div>
         </div>
