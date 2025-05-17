@@ -19,10 +19,10 @@
             background-image: url('./background.jpg');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: black; /* Changed to black for white background */
             text-align: center;
             padding: 2rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Improve text readability */
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* White shadow for readability */
         }
         header h1 {
             margin: 0;
@@ -189,7 +189,6 @@
             <div class="state-form">
                 <select id="stateSelect">
                     <option value="">Select your state</option>
-                    <option value="NH">New Hampshire</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -218,6 +217,7 @@
                     <option value="MT">Montana</option>
                     <option value="NE">Nebraska</option>
                     <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
                     <option value="NJ">New Jersey</option>
                     <option value="NM">New Mexico</option>
                     <option value="NY">New York</option>
@@ -286,14 +286,209 @@
     </footer>
 
     <script>
-        // Static senator data for fallback (New Hampshire only for brevity; add others as needed)
+        // Static senator data for all 50 states (based on 118th Congress, 2023-2024)
+        // Note: Verify 119th Congress (2025) senators, as 2024 elections may change some names
         const senatorData = {
+            AL: [
+                { name: "Tommy Tuberville", contactUrl: "https://www.tuberville.senate.gov/contact/contact-form/" },
+                { name: "Katie Britt", contactUrl: "https://www.britt.senate.gov/contact_katie/" }
+            ],
+            AK: [
+                { name: "Lisa Murkowski", contactUrl: "https://www.murkowski.senate.gov/contact" },
+                { name: "Dan Sullivan", contactUrl: "https://www.sullivan.senate.gov/contact" }
+            ],
+            AZ: [
+                { name: "Kyrsten Sinema", contactUrl: "https://www.sinema.senate.gov/contact-kyrsten" },
+                { name: "Mark Kelly", contactUrl: "https://www.kelly.senate.gov/contact/" }
+            ],
+            AR: [
+                { name: "John Boozman", contactUrl: "https://www.boozman.senate.gov/public/index.cfm/contact" },
+                { name: "Tom Cotton", contactUrl: "https://www.cotton.senate.gov/contact/contact-tom" }
+            ],
+            CA: [
+                { name: "Alex Padilla", contactUrl: "https://www.padilla.senate.gov/contact/" },
+                { name: "Laphonza Butler", contactUrl: "https://www.butler.senate.gov/contact/" }
+            ],
+            CO: [
+                { name: "Michael Bennet", contactUrl: "https://www.bennet.senate.gov/public/index.cfm/contact" },
+                { name: "John Hickenlooper", contactUrl: "https://www.hickenlooper.senate.gov/contact/" }
+            ],
+            CT: [
+                { name: "Richard Blumenthal", contactUrl: "https://www.blumenthal.senate.gov/contact/" },
+                { name: "Chris Murphy", contactUrl: "https://www.murphy.senate.gov/contact" }
+            ],
+            DE: [
+                { name: "Tom Carper", contactUrl: "https://www.carper.senate.gov/public/index.cfm/email-senator-carper" },
+                { name: "Chris Coons", contactUrl: "https://www.coons.senate.gov/contact" }
+            ],
+            FL: [
+                { name: "Marco Rubio", contactUrl: "https://www.rubio.senate.gov/public/index.cfm/contact" },
+                { name: "Rick Scott", contactUrl: "https://www.rickscott.senate.gov/contact_rick" }
+            ],
+            GA: [
+                { name: "Jon Ossoff", contactUrl: "https://www.ossoff.senate.gov/contact-us/" },
+                { name: "Raphael Warnock", contactUrl: "https://www.warnock.senate.gov/contact/" }
+            ],
+            HI: [
+                { name: "Brian Schatz", contactUrl: "https://www.schatz.senate.gov/contact" },
+                { name: "Mazie Hirono", contactUrl: "https://www.hirono.senate.gov/contact" }
+            ],
+            ID: [
+                { name: "Mike Crapo", contactUrl: "https://www.crapo.senate.gov/contact" },
+                { name: "Jim Risch", contactUrl: "https://www.risch.senate.gov/public/index.cfm/contact" }
+            ],
+            IL: [
+                { name: "Dick Durbin", contactUrl: "https://www.durbin.senate.gov/contact/" },
+                { name: "Tammy Duckworth", contactUrl: "https://www.duckworth.senate.gov/content/contact-senator" }
+            ],
+            IN: [
+                { name: "Todd Young", contactUrl: "https://www.young.senate.gov/contact" },
+                { name: "Mike Braun", contactUrl: "https://www.braun.senate.gov/contact-mike" }
+            ],
+            IA: [
+                { name: "Chuck Grassley", contactUrl: "https://www.grassley.senate.gov/contact" },
+                { name: "Joni Ernst", contactUrl: "https://www.ernst.senate.gov/public/index.cfm/contact" }
+            ],
+            KS: [
+                { name: "Jerry Moran", contactUrl: "https://www.moran.senate.gov/public/index.cfm/contact" },
+                { name: "Roger Marshall", contactUrl: "https://www.marshall.senate.gov/contact/" }
+            ],
+            KY: [
+                { name: "Mitch McConnell", contactUrl: "https://www.mcconnell.senate.gov/public/index.cfm?p=contact" },
+                { name: "Rand Paul", contactUrl: "https://www.paul.senate.gov/connect/contact-rand" }
+            ],
+            LA: [
+                { name: "Bill Cassidy", contactUrl: "https://www.cassidy.senate.gov/contact" },
+                { name: "John Kennedy", contactUrl: "https://www.kennedy.senate.gov/public/index.cfm/contact" }
+            ],
+            ME: [
+                { name: "Susan Collins", contactUrl: "https://www.collins.senate.gov/contact" },
+                { name: "Angus King", contactUrl: "https://www.king.senate.gov/contact" }
+            ],
+            MD: [
+                { name: "Ben Cardin", contactUrl: "https://www.cardin.senate.gov/contact/" },
+                { name: "Chris Van Hollen", contactUrl: "https://www.vanhollen.senate.gov/contact" }
+            ],
+            MA: [
+                { name: "Elizabeth Warren", contactUrl: "https://www.warren.senate.gov/contact" },
+                { name: "Ed Markey", contactUrl: "https://www.markey.senate.gov/contact" }
+            ],
+            MI: [
+                { name: "Debbie Stabenow", contactUrl: "https://www.stabenow.senate.gov/contact" },
+                { name: "Gary Peters", contactUrl: "https://www.peters.senate.gov/contact/email-gary" }
+            ],
+            MN: [
+                { name: "Amy Klobuchar", contactUrl: "https://www.klobuchar.senate.gov/public/index.cfm/contact" },
+                { name: "Tina Smith", contactUrl: "https://www.smith.senate.gov/contact-tina" }
+            ],
+            MS: [
+                { name: "Roger Wicker", contactUrl: "https://www.wicker.senate.gov/public/index.cfm/contact" },
+                { name: "Cindy Hyde-Smith", contactUrl: "https://www.hydesmith.senate.gov/contact-senator" }
+            ],
+            MO: [
+                { name: "Josh Hawley", contactUrl: "https://www.hawley.senate.gov/contact-senator-hawley" },
+                { name: "Eric Schmitt", contactUrl: "https://www.schmitt.senate.gov/contact/" }
+            ],
+            MT: [
+                { name: "Jon Tester", contactUrl: "https://www.tester.senate.gov/?p=contact" },
+                { name: "Steve Daines", contactUrl: "https://www.daines.senate.gov/connect" }
+            ],
+            NE: [
+                { name: "Deb Fischer", contactUrl: "https://www.fischer.senate.gov/public/index.cfm/contact" },
+                { name: "Ben Sasse", contactUrl: "https://www.sasse.senate.gov/public/index.cfm/contact" }
+            ],
+            NV: [
+                { name: "Catherine Cortez Masto", contactUrl: "https://www.cortezmasto.senate.gov/contact" },
+                { name: "Jacky Rosen", contactUrl: "https://www.rosen.senate.gov/contact_jacky" }
+            ],
             NH: [
                 { name: "Jeanne Shaheen", contactUrl: "https://www.shaheen.senate.gov/contact/contact-jeanne" },
                 { name: "Maggie Hassan", contactUrl: "https://www.hassan.senate.gov/contact" }
+            ],
+            NJ: [
+                { name: "Bob Menendez", contactUrl: "https://www.menendez.senate.gov/contact" },
+                { name: "Cory Booker", contactUrl: "https://www.booker.senate.gov/?p=contact" }
+            ],
+            NM: [
+                { name: "Martin Heinrich", contactUrl: "https://www.heinrich.senate.gov/contact" },
+                { name: "Ben Ray Luján", contactUrl: "https://www.lujan.senate.gov/contact/" }
+            ],
+            NY: [
+                { name: "Chuck Schumer", contactUrl: "https://www.schumer.senate.gov/contact/email-chuck" },
+                { name: "Kirsten Gillibrand", contactUrl: "https://www.gillibrand.senate.gov/contact/email-me" }
+            ],
+            NC: [
+                { name: "Thom Tillis", contactUrl: "https://www.tillis.senate.gov/contact/email-me" },
+                { name: "Ted Budd", contactUrl: "https://www.budd.senate.gov/contact/" }
+            ],
+            ND: [
+                { name: "John Hoeven", contactUrl: "https://www.hoeven.senate.gov/contact/email-the-senator" },
+                { name: "Kevin Cramer", contactUrl: "https://www.cramer.senate.gov/contact/contact-kevin" }
+            ],
+            OH: [
+                { name: "Sherrod Brown", contactUrl: "https://www.brown.senate.gov/contact/" },
+                { name: "J.D. Vance", contactUrl: "https://www.vance.senate.gov/contact/" }
+            ],
+            OK: [
+                { name: "James Lankford", contactUrl: "https://www.lankford.senate.gov/contact/email" },
+                { name: "Markwayne Mullin", contactUrl: "https://www.mullin.senate.gov/contact/contact-form/" }
+            ],
+            OR: [
+                { name: "Ron Wyden", contactUrl: "https://www.wyden.senate.gov/contact/" },
+                { name: "Jeff Merkley", contactUrl: "https://www.merkley.senate.gov/contact/" }
+            ],
+            PA: [
+                { name: "Bob Casey", contactUrl: "https://www.casey.senate.gov/contact/" },
+                { name: "John Fetterman", contactUrl: "https://www.fetterman.senate.gov/contact/" }
+            ],
+            RI: [
+                { name: "Jack Reed", contactUrl: "https://www.reed.senate.gov/contact/" },
+                { name: "Sheldon Whitehouse", contactUrl: "https://www.whitehouse.senate.gov/contact/email-sheldon" }
+            ],
+            SC: [
+                { name: "Lindsey Graham", contactUrl: "https://www.lgraham.senate.gov/public/index.cfm/e-mail-senator-graham" },
+                { name: "Tim Scott", contactUrl: "https://www.scott.senate.gov/contact/email-me" }
+            ],
+            SD: [
+                { name: "John Thune", contactUrl: "https://www.thune.senate.gov/public/index.cfm/contact" },
+                { name: "Mike Rounds", contactUrl: "https://www.rounds.senate.gov/contact/email-mike" }
+            ],
+            TN: [
+                { name: "Marsha Blackburn", contactUrl: "https://www.blackburn.senate.gov/contact_marsha.html" },
+                { name: "Bill Hagerty", contactUrl: "https://www.hagerty.senate.gov/contact/" }
+            ],
+            TX: [
+                { name: "John Cornyn", contactUrl: "https://www.cornyn.senate.gov/contact" },
+                { name: "Ted Cruz", contactUrl: "https://www.cruz.senate.gov/?p=form&id=16" }
+            ],
+            UT: [
+                { name: "Mike Lee", contactUrl: "https://www.lee.senate.gov/public/index.cfm/contact" },
+                { name: "Mitt Romney", contactUrl: "https://www.romney.senate.gov/contact/" }
+            ],
+            VT: [
+                { name: "Bernie Sanders", contactUrl: "https://www.sanders.senate.gov/contact/" },
+                { name: "Peter Welch", contactUrl: "https://www.welch.senate.gov/contact/" }
+            ],
+            VA: [
+                { name: "Mark Warner", contactUrl: "https://www.warner.senate.gov/public/index.cfm?p=Contact" },
+                { name: "Tim Kaine", contactUrl: "https://www.kaine.senate.gov/contact" }
+            ],
+            WA: [
+                { name: "Patty Murray", contactUrl: "https://www.murray.senate.gov/public/index.cfm/contactme" },
+                { name: "Maria Cantwell", contactUrl: "https://www.cantwell.senate.gov/contact/email/form" }
+            ],
+            WV: [
+                { name: "Joe Manchin", contactUrl: "https://www.manchin.senate.gov/contact-joe" },
+                { name: "Shelley Moore Capito", contactUrl: "https://www.capito.senate.gov/contact/contact-shelley" }
+            ],
+            WI: [
+                { name: "Ron Johnson", contactUrl: "https://www.ronjohnson.senate.gov/public/index.cfm/contact" },
+                { name: "Tammy Baldwin", contactUrl: "https://www.baldwin.senate.gov/contact" }
+            ],
+            WY: [
+                { name: "John Barrasso", contactUrl: "https://www.barrasso.senate.gov/public/index.cfm/contact-form" },
+                { name: "Cynthia Lummis", contactUrl: "https://www.lummis.senate.gov/contact/" }
             ]
-            // Add other states' senators, e.g., AL: [{ name: "Tommy Tuberville", contactUrl: "https://www.tuberville.senate.gov/contact/contact-form/" }, ...]
-            // Full list available at https://www.senate.gov/senators/senators-contact.htm
         };
 
         function loadStateSenators() {
@@ -315,7 +510,7 @@
                 linksHtml += '</ul>';
                 document.getElementById('senatorLinks').innerHTML = linksHtml;
             } else {
-                alert('Senator data for this state is not yet available. Please visit https://www.senate.gov/senators/senators-contact.htm to find your senators.');
+                alert('Senator data for this state is not available. Please visit https://www.senate.gov/senators/senators-contact.htm to find your senators.');
             }
         }
 
