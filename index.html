@@ -16,50 +16,50 @@
             background-color: #f4f4f4;
         }
         header {
-    background-image: url('./background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #3F51B5; /* Indigo */
-    text-align: center;
-    padding: 1rem 2rem; /* Reduced padding to shrink vertical space */
-    position: relative;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align text to top */
-    align-items: center;
-}
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Darkened overlay for better contrast */
-    z-index: 1;
-}
-header h1, header p {
-    position: relative;
-    z-index: 2;
-}
-header h1 {
-    margin: 0.5rem 0 0 0; /* Tightened margins */
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem; /* Reduced from 2.8rem */
-    letter-spacing: 1px; /* Reduced from 2px */
-    color: #3F51B5; /* Indigo */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 6px rgba(255, 255, 255, 0.6); /* Slightly reduced glow */
-    animation: pulse 19s ease-in-out infinite;
-}
-header p {
-    font-family: 'Roboto Slab', serif;
-    font-size: 0.9rem; /* Reduced from 1.2rem */
-    margin: 0.2rem 0; /* Tightened margins */
-    color: #3F51B5; /* Indigo */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 6px rgba(255, 255, 255, 0.6); /* Slightly reduced glow */
-    font-weight: bold;
-}
+            background-image: url('./background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #FFD700; /* Bright gold */
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8);
+            animation: pulse 19s ease-in-out infinite;
+        }
+        header p {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8);
+            font-weight: bold;
+        }
         nav {
             background: #333;
             padding: 1rem;
@@ -169,38 +169,27 @@ header p {
             bottom: 0;
             width: 100%;
         }
-      @media (max-width: 600px) {
-    header {
-        min-height: 200px;
-        padding: 0.5rem 1rem; /* Reduced from 2rem 1rem to shrink vertical space */
-        justify-content: flex-start; /* Align text to top */
-    }
-    header h1 {
-        font-size: 1.2rem; /* Reduced from 2rem to fit top 1/4 */
-        margin: 0.3rem 0 0 0; /* Tighter margins */
-        letter-spacing: 1px; /* Consistent with desktop */
-        color: #3F51B5; /* Indigo */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 6px rgba(255, 255, 255, 0.6);
-    }
-    header p {
-        font-size: 0.7rem; /* Reduced to fit compactly */
-        margin: 0.1rem 0; /* Tighter margins */
-        color: #3F51B5; /* Indigo */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 6px rgba(255, 255, 255, 0.6);
-    }
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-    }
-    .state-form select {
-        width: 100%;
-    }
-    .social-icon img {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin: 0.3rem;
-    }
-}
+        @media (max-width: 600px) {
+            header {
+                min-height: 200px;
+                padding: 2rem 1rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            .state-form select {
+                width: 100%;
+            }
+            .social-icon img {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin: 0.3rem;
+            }
+        }
         @keyframes pulse {
             0% {
                 transform: scale(1);
