@@ -16,21 +16,26 @@
             background-color: #f4f4f4;
         }
         strong {
-            font-weight: bold !important; /* Use !important to override potential conflicting styles */
+            font-weight: bold !important;
         }
         header {
-            background-image: url('./background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #FFD700; /* Bright gold */
+            position: relative;
             text-align: center;
             padding: 4rem 2rem;
-            position: relative;
             min-height: 300px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+        header img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
         }
         header::before {
             content: '';
@@ -45,13 +50,13 @@
         header h1, header p {
             position: relative;
             z-index: 2;
+            color: #FFD700;
         }
         header h1 {
             margin: 0;
             font-family: 'Orbitron', sans-serif;
             font-size: 2.8rem;
             letter-spacing: 2px;
-            color: #FFD700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8);
             animation: pulse 19s ease-in-out infinite;
         }
@@ -59,7 +64,6 @@
             font-family: 'Roboto Slab', serif;
             font-size: 1.2rem;
             margin: 0.5rem 0;
-            color: #FFD700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8);
             font-weight: bold;
         }
@@ -89,21 +93,37 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .section#support p strong {
-           font-weight: 700 !important;
+            font-weight: 700 !important;
         }
         .section h2 {
             color: #2c3e50;
             margin-top: 0;
             font-family: 'Orbitron', sans-serif;
         }
-        .social-icon img {
+        .social-icon {
+            display: inline-block;
             width: 2rem;
             height: 2rem;
-            object-fit: contain;
             margin: 0.5rem;
-            vertical-align: middle;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
-        .social-icon img:hover {
+        .x-icon {
+            background-image: url('icons/x.png');
+        }
+        .facebook-icon {
+            background-image: url('icons/facebook.png');
+        }
+        .bluesky-icon {
+            background-image: url('icons/bluesky.png');
+        }
+        .linkedin-icon {
+            background-image: url('icons/linkedin.png');
+        }
+        .instagram-icon {
+            background-image: url('icons/instagram.png');
+        }
+        .social-icon:hover {
             opacity: 0.8;
         }
         .letter {
@@ -196,7 +216,7 @@
             .state-form select {
                 width: 100%;
             }
-            .social-icon img {
+            .social-icon {
                 width: 1.5rem;
                 height: 1.5rem;
                 margin: 0.3rem;
@@ -220,7 +240,7 @@
 </head>
 <body>
     <header>
-        <img src="https://aime2solve.github.io/EcotronScience/background.jpg" alt="Ecotron Science banner image" style="width:100%; max-height:300px; object-fit:cover;">
+        <img src="https://aime2solve.github.io/EcotronScience/background.jpg" alt="Ecotron Science banner image" style="width:100%; height:100%; object-fit:cover;">
         <h1>Ecotron Science</h1>
         <p>Bringing Nature Indoors Today to Pioneer a Sustainable Tomorrow</p>
     </header>
@@ -250,7 +270,6 @@
                 <li><strong>Resolving Debates:</strong> By testing biotechnologies like genetically engineered organisms or chimeric DNA in a controlled and reproducible way, ecotrons can provide transparent data to address concerns about safety and ethics.</li>
                 <li><strong>Exploring Space:</strong> Ecotrons can also lend insight into how to bottle a biosphere so people can one day live and work off-planet.</li>
             </ul>
-            
         </div>
 
         <!-- Call to Action: Support Ecotrons -->
@@ -330,27 +349,27 @@
             <p>Share this page on social media to spread the word!</p>
             <p>For LinkedIn, Facebook, and Instagram, copy and paste this message:</p>
             <p><strong>Support ecotron research to tackle environmental problems, ensure safe biotech, and advance space exploration. A letter for your senators is included! Learn more: https://aime2solve.github.io/EcotronScience #Ecotrons #ComparativeBiospheromics</strong></p>
-<p>
-    <a href="https://twitter.com/intent/tweet?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20A%20letter%20for%20your%20senators%20is%20included!%20Learn%20more:%20https://aime2solve.github.io/EcotronScience%20%23Ecotrons%20%23ComparativeBiospheromics" target="_blank" rel="noopener" class="social-icon" aria-label="Share on X"><img src="icons/x.png" alt="X"></a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://aime2solve.github.io/EcotronScience&quote=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20A%20letter%20for%20your%20senators%20is%20included!%20Learn%20more:%20https://aime2solve.github.io/EcotronScience%20%23Ecotrons%20%23ComparativeRNAs" target="_blank" rel="noopener" class="social-icon" aria-label="Share on Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
-    <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20A%20letter%20for%20your%20senators%20is%20included!%20Learn%20more:%20https://aime2solve.github.io/EcotronScience%20%23Ecotrons%20%23ComparativeBiospheromics" target="_blank" rel="noopener" class="social-icon" aria-label="Share on BlueSky"><img src="icons/bluesky.png" alt="BlueSky"></a>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://aime2solve.github.io/EcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social-icon" aria-label="Share on Instagram"><img src="icons/instagram.png" alt="Instagram"></a>
-</p>
+            <p>
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Faime2solve.github.io%2FEcotronScience&text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20%23Ecotrons%20%23ComparativeBiospheromics" target="_blank" rel="noopener nofollow" class="social-icon x-icon" aria-label="Share on X"></a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener nofollow" class="social-icon linkedin-icon" aria-label="Share on LinkedIn"></a>
+                <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20%23Ecotrons%20%23ComparativeBiospheromics" target="_blank" rel="noopener nofollow" class="social-icon bluesky-icon" aria-label="Share on BlueSky"></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener nofollow" class="social-icon facebook-icon" aria-label="Share on Facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener nofollow" class="social-icon instagram-icon" aria-label="Share on Instagram"></a>
+            </p>
             <p><strong>Private foundations that might be persuaded to join the effort:</strong></p>
-<ul>
-   <li><a href="https://www.gatesfoundation.org/" target="_blank" rel="noopener">Gates Foundation</a> ($77.2B)</li>
-   <li><a href="https://www.wellcome.org/" target="_blank" rel="noopener">Wellcome Trust</a> ($46.4B)</li>
-    <li><a href="https://www.hhmi.org/" target="_blank" rel="noopener">Howard Hughes Medical Institute</a> ($27.1B)</li>
-    <li><a href="https://www.bezosearthfund.org/" target="_blank" rel="noopener">Bezos Earth Fund</a> ($10B pledged)</li>
-    <li><a href="https://www.wkkf.org/" target="_blank" rel="noopener">W.K. Kellogg Foundation</a> ($8.7B)</li>
-    <li><a href="https://www.packard.org/" target="_blank" rel="noopener">David and Lucile Packard Foundation</a> ($7.1B)</li>
-    <li><a href="https://www.moore.org/" target="_blank" rel="noopener">Gordon and Betty Moore Foundation</a> ($6.1B)</li>
-    <li><a href="https://muskfoundation.org/" target="_blank" rel="noopener">Musk Foundation</a> ($5B estimated)</li>
-    <li><a href="https://www.mott.org/" target="_blank" rel="noopener">Charles Stewart Mott Foundation</a> ($3.7B)</li>
-    <li><a href="https://www.simonsfoundation.org/" target="_blank" rel="noopener">Simons Foundation</a> ($3.3B)</li>
-    <li><a href="https://www.heisingsimons.org/" target="_blank" rel="noopener">Heising-Simons Foundation</a> ($1.4B)</li>
-</ul>
+            <ul>
+                <li><a href="https://www.gatesfoundation.org/" target="_blank" rel="noopener">Gates Foundation</a> ($77.2B)</li>
+                <li><a href="https://www.wellcome.org/" target="_blank" rel="noopener">Wellcome Trust</a> ($46.4B)</li>
+                <li><a href="https://www.hhmi.org/" target="_blank" rel="noopener">Howard Hughes Medical Institute</a> ($27.1B)</li>
+                <li><a href="https://www.bezosearthfund.org/" target="_blank" rel="noopener">Bezos Earth Fund</a> ($10B pledged)</li>
+                <li><a href="https://www.wkkf.org/" target="_blank" rel="noopener">W.K. Kellogg Foundation</a> ($8.7B)</li>
+                <li><a href="https://www.packard.org/" target="_blank" rel="noopener">David and Lucile Packard Foundation</a> ($7.1B)</li>
+                <li><a href="https://www.moore.org/" target="_blank" rel="noopener">Gordon and Betty Moore Foundation</a> ($6.1B)</li>
+                <li><a href="https://muskfoundation.org/" target="_blank" rel="noopener">Musk Foundation</a> ($5B estimated)</li>
+                <li><a href="https://www.mott.org/" target="_blank" rel="noopener">Charles Stewart Mott Foundation</a> ($3.7B)</li>
+                <li><a href="https://www.simonsfoundation.org/" target="_blank" rel="noopener">Simons Foundation</a> ($3.3B)</li>
+                <li><a href="https://www.heisingsimons.org/" target="_blank" rel="noopener">Heising-Simons Foundation</a> ($1.4B)</li>
+            </ul>
         </div>
 
         <!-- Relevant Articles -->
