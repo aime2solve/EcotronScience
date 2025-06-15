@@ -19,6 +19,7 @@
     <meta name="twitter:image" content="https://aime2solve.github.io/EcotronScience/background.jpg">
     <title>Ecotron Science - Pioneering a Sustainable Tomorrow</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="./background.jpg" as="image">
     <style>
         body {
             font-family: 'Roboto Slab', Arial, sans-serif;
@@ -27,6 +28,7 @@
             line-height: 1.6;
             color: #333;
             background-color: #f4f4f4;
+            font-size: 16px;
         }
         strong {
             font-weight: bold !important;
@@ -79,15 +81,18 @@
         nav {
             background: #333;
             padding: 1rem;
+            text-align: center;
         }
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 1rem;
             font-weight: bold;
+            font-size: 1rem;
         }
-        nav a:hover {
+        nav a:hover, nav a:focus {
             color: #3498db;
+            outline: none;
         }
         .container {
             max-width: 1000px;
@@ -108,6 +113,7 @@
             color: #2c3e50;
             margin-top: 0;
             font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
         }
         .social-icon img {
             width: 2rem;
@@ -115,6 +121,7 @@
             object-fit: contain;
             margin: 0.5rem;
             vertical-align: middle;
+            loading: lazy;
         }
         .social-icon img:hover {
             opacity: 0.8;
@@ -128,56 +135,95 @@
         .state-form {
             margin: 1rem 0;
         }
-        .state-form select {
+        .state-form select, .state-form button {
             padding: 0.5rem;
             font-size: 1rem;
-            width: 200px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            margin: 0.3rem 0;
+        }
+        .state-form select {
+            width: 200px;
         }
         .state-form button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .state-form button:hover, .state-form button:focus {
+            background: #3498db;
+            outline: none;
+        }
+        .senator-links {
+            margin: 1rem 0;
+        }
+        .articles ul, .additional-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .articles li, .additional-links li {
+            margin: 1.5rem 0;
+        }
+        .articles a, .additional-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .articles a:hover, .additional-links a:hover {
+            color: #2980b9;
+        }
+        .budget-table {
+            margin: 1rem 0;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+        .budget-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .budget-table th, .budget-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-family: 'Roboto Slab', serif;
+            font-size: 0.95rem;
+        }
+        .budget-table th {
+            background: #2c3e50;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+        }
+        .budget-table tr.total td {
+            background: #ecf0f1;
+            font-weight: bold;
+        }
+        .budget-table tr:hover {
+            background: #f9f9f9;
+        }
+        #budgetButton {
             padding: 0.5rem 1rem;
             background: #2c3e50;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-family: 'Roboto Slab', serif;
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            transition: background 0.3s;
         }
-        .state-form button:hover {
+        #budgetButton:hover, #budgetButton:focus {
             background: #3498db;
+            outline: none;
         }
-        .senator-links {
-            margin: 1rem 0;
-        }
-        .articles ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .articles li {
-            margin: 1.5rem 0;
-        }
-        .articles a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .articles a:hover {
-            color: #2980b9;
-        }
-        .additional-links ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .additional-links li {
-            margin: 1rem 0;
-        }
-        .additional-links a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .additional-links a:hover {
-            color: #2980b9;
+        #budgetButton[aria-expanded="true"] {
+            background: #3498db;
         }
         footer {
             background: #333;
@@ -196,33 +242,71 @@
         }
         @media (max-width: 600px) {
             header {
-                min-height: 200px;
-                padding: 2rem 1rem;
+                min-height: 150px;
+                padding: 1.5rem 0.5rem;
             }
             header h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            nav {
+                padding: 0.5rem;
             }
             nav a {
                 display: block;
-                margin: 0.5rem 0;
+                margin: 0.3rem 0;
+                font-size: 0.9rem;
             }
-            .state-form select {
+            .container {
+                padding: 0 0.5rem;
+                margin: 1rem auto;
+            }
+            .section {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            .state-form select, .state-form button, #budgetButton {
                 width: 100%;
+                margin: 0.3rem 0;
+                font-size: 0.9rem;
+            }
+            .budget-table th, .budget-table td {
+                font-size: 0.85rem;
+                padding: 0.5rem;
             }
             .social-icon img {
                 width: 1.5rem;
                 height: 1.5rem;
-                margin: 0.3rem;
+            }
+        }
+        @media (max-width: 400px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .section h2 {
+                font-size: 1.3rem;
+            }
+            .budget-table th, .budget-table td {
+                font-size: 0.8rem;
+                padding: 0.4rem;
             }
         }
         @keyframes pulse {
             0% {
                 transform: scale(1);
             }
-            21.05% { /* 4s / 19s */
+            21.05% {
                 transform: scale(1.03);
             }
-            57.89% { /* (4s + 7s) / 19s */
+            57.89% {
                 transform: scale(1.03);
             }
             100% {
@@ -232,7 +316,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header aria-label="Ecotron Science Header with background image of a high-tech lab">
         <h1>Ecotron Science</h1>
         <p>Bringing Nature Indoors Today to Pioneer a Sustainable Tomorrow</p>
     </header>
@@ -268,9 +352,150 @@
         <div class="section" id="support">
             <h2>Support Ecotron Research</h2>
             <p>Synthetic biology will require far more public support for applications to be fully realized outside of laboratories. Without funding and public trust, we risk losing tools to tackle environmental problems, ensure safe biotechnologies, and advance space exploration.</p>
+            <p>Learn about the funding needed to establish and operate ecotron facilities:</p>
+            <button id="budgetButton" aria-expanded="false" aria-controls="budgetTable">Proposed Budget</button>
+            <div id="budgetTable" class="budget-table" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Subcategory</th>
+                            <th>FTEs</th>
+                            <th>Avg Cost / Salary</th>
+                            <th>Estimated Total Cost (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Infrastructure</td>
+                            <td>Site development & infrastructure (utilities, access roads, foundation)</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$3M–$6M</td>
+                        </tr>
+                        <tr>
+                            <td>Infrastructure</td>
+                            <td>Main facility (labs, control center, admin, mechanical rooms)</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$8M–$15M</td>
+                        </tr>
+                        <tr>
+                            <td>Infrastructure</td>
+                            <td>Ecotron chambers (10–20 modular biomes: forest, wetland, arid, soil, etc.)</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$8M–$25M</td>
+                        </tr>
+                        <tr>
+                            <td>Infrastructure</td>
+                            <td>Containment & biosafety infrastructure (airlocks, secure waste handling)</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$1M–$5M</td>
+                        </tr>
+                        <tr class="total">
+                            <td colspan="2">Estimated Initial Build Cost</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$20M–$51M</td>
+                        </tr>
+                        <tr>
+                            <td>Equipment & Instrumentation</td>
+                            <td>High-resolution sensors (climate, gases, microbial, etc.)</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$3M–$5M</td>
+                        </tr>
+                        <tr>
+                            <td>Equipment & Instrumentation</td>
+                            <td>Genomic & bioinformatics lab (eDNA, omics workflows)</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$3M–$6M</td>
+                        </tr>
+                        <tr>
+                            <td>Equipment & Instrumentation</td>
+                            <td>Automated sampling systems and robotic arms</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$1M–$3M</td>
+                        </tr>
+                        <tr>
+                            <td>Equipment & Instrumentation</td>
+                            <td>Climate simulation controls (CO₂, light, irrigation)</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$1M–$3M</td>
+                        </tr>
+                        <tr>
+                            <td>Equipment & Instrumentation</td>
+                            <td>High-performance computing (modeling, data integration)</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$2M–$5M</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Staffing & Operations</td>
+                            <td>Principal Investigators (ecology, biotech, biosafety)</td>
+                            <td>4</td>
+                            <td>~$250K</td>
+                            <td>$1M</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Staffing & Operations</td>
+                            <td>Scientists / Postdoctoral Researchers</td>
+                            <td>8–12</td>
+                            <td>~$150K</td>
+                            <td>$1.2M–$1.8M</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Staffing & Operations</td>
+                            <td>Lab Technicians, Operators, Field Biologists</td>
+                            <td>10–15</td>
+                            <td>~$100K</td>
+                            <td>$1M–$1.5M</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Staffing & Operations</td>
+                            <td>Data Scientists & Ecosystem Modelers</td>
+                            <td>4</td>
+                            <td>~$160K</td>
+                            <td>$640K</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Staffing & Operations</td>
+                            <td>Facilities & Engineering Staff</td>
+                            <td>6</td>
+                            <td>~$120K</td>
+                            <td>$720K</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Staffing & Operations</td>
+                            <td>Administration, Outreach, Public Communication</td>
+                            <td>3–5</td>
+                            <td>~$100K</td>
+                            <td>$300K–$500K</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Staffing & Operations</td>
+                            <td>Misc. Overhead and Contingencies</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$500K–$1M</td>
+                        </tr>
+                        <tr class="total">
+                            <td colspan="2">Total Estimated Yearly Operations Cost</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>$15M–$30M</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <p>Select your state below to personalize a letter to your senators and help champion ecotron science.</p>
             <div class="state-form">
-                <select id="stateSelect">
+                <select id="stateSelect" aria-label="Select your state">
                     <option value="">Select your state</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -342,12 +567,12 @@
             <p>Share this page on social media to spread the word!</p>
             <p>For LinkedIn, Facebook, and Instagram, copy and paste this message:</p>
             <p><strong>Support ecotron research to tackle environmental problems, ensure safe biotech, and advance space exploration. A letter for your senators is included! Learn more: https://aime2solve.github.io/EcotronScience #Ecotrons #ComparativeBiospheromics</strong></p>
+            <p>For Instagram, copy the message above and share it as a post or story with the link: <a href="https://aime2solve.github.io/EcotronScience" target="_blank" rel="noopener">https://aime2solve.github.io/EcotronScience</a></p>
             <p>
                 <a href="https://twitter.com/intent/tweet?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20Learn%20more%20and%20share%20the%20included%20letter%20with%20your%20senators.%20%23Ecotrons%20%23ComparativeBiospheromics%20Visit%20https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on X"><img src="icons/x.png" alt="X"></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
                 <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20Learn%20more%20and%20share%20the%20included%20letter%20with%20your%20senators.%20%23Ecotrons%20%23ComparativeBiospheromics%20Visit%20https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on BlueSky"><img src="icons/bluesky.png" alt="BlueSky"></a>
                 <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social-icon" aria-label="Share on Instagram"><img src="icons/instagram.png" alt="Instagram"></a>
             </p>
             <p><strong>Private foundations that might be persuaded to join the effort:</strong></p>
             <ul>
@@ -609,22 +834,31 @@
                 alert('Please select a state.');
                 return;
             }
-
             const senators = senatorData[state];
-            if (senators) {
-                const senatorNames = senators.map(s => s.name).join(' and ');
-                document.getElementById('salutation').textContent = `Dear Senators ${senatorNames},`;
-
-                let linksHtml = '<p>Contact your senators:</p><ul>';
-                senators.forEach(senator => {
-                    linksHtml += `<li><a href="${senator.contactUrl}" target="_blank">${senator.name} Contact Form</a></li>`;
-                });
-                linksHtml += '</ul>';
-                document.getElementById('senatorLinks').innerHTML = linksHtml;
-            } else {
+            if (!senators || senators.length === 0) {
                 alert('Senator data for this state is not available. Please visit https://www.senate.gov/senators/senators-contact.htm to find your senators.');
+                return;
             }
+            const senatorNames = senators.map(s => s.name).join(' and ');
+            document.getElementById('salutation').textContent = `Dear Senators ${senatorNames},`;
+            let linksHtml = '<p>Contact your senators:</p><ul>';
+            senators.forEach(senator => {
+                linksHtml += `<li><a href="${senator.contactUrl}" target="_blank" rel="noopener">${senator.name} Contact Form</a></li>`;
+            });
+            linksHtml += '</ul>';
+            document.getElementById('senatorLinks').innerHTML = linksHtml;
         }
+
+        function toggleBudgetTable() {
+            const table = document.getElementById('budgetTable');
+            const button = document.getElementById('budgetButton');
+            const isHidden = table.style.display === 'none' || table.style.display === '';
+            table.style.display = isHidden ? 'block' : 'none';
+            button.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+            button.textContent = isHidden ? 'Hide Budget' : 'Proposed Budget';
+        }
+
+        document.getElementById('budgetButton').addEventListener('click', toggleBudgetTable);
     </script>
 </body>
 </html>
