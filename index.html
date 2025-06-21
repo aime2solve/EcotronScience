@@ -223,7 +223,9 @@
             outline: none;
         }
         #budgetButton[aria-expanded="true"] {
-            background: #3498db;
+            background: # /
+
+3498db;
         }
         footer {
             background: #333;
@@ -247,6 +249,7 @@
             }
             header h1 {
                 font-size: 1.8rem;
+                animation: pulse 10s ease-in-out infinite; /* Faster animation for mobile */
             }
             header p {
                 font-size: 1rem;
@@ -287,6 +290,7 @@
         @media (max-width: 400px) {
             header h1 {
                 font-size: 1.5rem;
+                animation: pulse 8s ease-in-out infinite; /* Even faster for smaller screens */
             }
             header p {
                 font-size: 0.9rem;
@@ -359,136 +363,74 @@
                     <thead>
                         <tr>
                             <th>Category</th>
-                            <th>Subcategory</th>
-                            <th>FTEs</th>
-                            <th>Avg Cost / Salary</th>
-                            <th>Estimated Total Cost (USD)</th>
+                            <th>Item</th>
+                            <th>Details</th>
+                            <th>Estimated Cost</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Infrastructure</td>
-                            <td>Site development & infrastructure (utilities, access roads, foundation)</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$3M–$6M</td>
+                            <td>Capital Costs (One-Time)</td>
+                            <td>Ecotron construction</td>
+                            <td>100 units × ~$6.5 million per ecotron (including environmental control, sensors, enclosures)</td>
+                            <td>$650,000,000.00</td>
                         </tr>
                         <tr>
-                            <td>Infrastructure</td>
-                            <td>Main facility (labs, control center, admin, mechanical rooms)</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$8M–$15M</td>
+                            <td>Capital Costs (One-Time)</td>
+                            <td>Land acquisition</td>
+                            <td>~10 acres of undeveloped land near Vail, AZ (~$16,100 per acre)</td>
+                            <td>$161,000.00</td>
                         </tr>
                         <tr>
-                            <td>Infrastructure</td>
-                            <td>Ecotron chambers (10–20 modular biomes: forest, wetland, arid, soil, etc.)</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$8M–$25M</td>
-                        </tr>
-                        <tr>
-                            <td>Infrastructure</td>
-                            <td>Containment & biosafety infrastructure (airlocks, secure waste handling)</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$1M–$5M</td>
+                            <td>Capital Costs (One-Time)</td>
+                            <td>Multi-use lab, office, classroom, conference space</td>
+                            <td></td>
+                            <td>$30,000,000</td>
                         </tr>
                         <tr class="total">
-                            <td colspan="2">Estimated Initial Build Cost</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$20M–$51M</td>
+                            <td colspan="2">Total Capital Costs (One-Time)</td>
+                            <td></td>
+                            <td>$680,161,000</td>
                         </tr>
                         <tr>
-                            <td>Equipment & Instrumentation</td>
-                            <td>High-resolution sensors (climate, gases, microbial, etc.)</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$3M–$5M</td>
+                            <td>Annual Operating Costs (Facility Only)</td>
+                            <td>Infrastructure operations</td>
+                            <td>Utilities, climate systems, maintenance (10% of build cost)</td>
+                            <td>$65,000,000/year</td>
                         </tr>
                         <tr>
-                            <td>Equipment & Instrumentation</td>
-                            <td>Genomic & bioinformatics lab (eDNA, omics workflows)</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$3M–$6M</td>
+                            <td>Annual Scientific Operations</td>
+                            <td>Personnel</td>
+                            <td>50 FTE technicians ($80k), 20 FTE senior staff ($120k)</td>
+                            <td>$6,400,000/year</td>
                         </tr>
                         <tr>
-                            <td>Equipment & Instrumentation</td>
-                            <td>Automated sampling systems and robotic arms</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$1M–$3M</td>
+                            <td>Annual Scientific Operations</td>
+                            <td>Laboratory analysis</td>
+                            <td>1,200 biospheromic samples/year @ $1,500/sample</td>
+                            <td>$1,800,000/year</td>
                         </tr>
                         <tr>
-                            <td>Equipment & Instrumentation</td>
-                            <td>Climate simulation controls (CO₂, light, irrigation)</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$1M–$3M</td>
+                            <td>Annual Scientific Operations</td>
+                            <td>Lab space and overhead</td>
+                            <td>5,000 sq ft × ~$200/sq ft operational costs</td>
+                            <td>$1,000,000/year</td>
                         </tr>
                         <tr>
-                            <td>Equipment & Instrumentation</td>
-                            <td>High-performance computing (modeling, data integration)</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$2M–$5M</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Staffing & Operations</td>
-                            <td>Principal Investigators (ecology, biotech, biosafety)</td>
-                            <td>4</td>
-                            <td>~$250K</td>
-                            <td>$1M</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Staffing & Operations</td>
-                            <td>Scientists / Postdoctoral Researchers</td>
-                            <td>8–12</td>
-                            <td>~$150K</td>
-                            <td>$1.2M–$1.8M</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Staffing & Operations</td>
-                            <td>Lab Technicians, Operators, Field Biologists</td>
-                            <td>10–15</td>
-                            <td>~$100K</td>
-                            <td>$1M–$1.5M</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Staffing & Operations</td>
-                            <td>Data Scientists & Ecosystem Modelers</td>
-                            <td>4</td>
-                            <td>~$160K</td>
-                            <td>$640K</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Staffing & Operations</td>
-                            <td>Facilities & Engineering Staff</td>
-                            <td>6</td>
-                            <td>~$120K</td>
-                            <td>$720K</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Staffing & Operations</td>
-                            <td>Administration, Outreach, Public Communication</td>
-                            <td>3–5</td>
-                            <td>~$100K</td>
-                            <td>$300K–$500K</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Staffing & Operations</td>
-                            <td>Misc. Overhead and Contingencies</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$500K–$1M</td>
+                            <td>Annual Scientific Operations</td>
+                            <td>Computing infrastructure</td>
+                            <td>HPC, cloud storage, data processing tools</td>
+                            <td>$500,000/year</td>
                         </tr>
                         <tr class="total">
-                            <td colspan="2">Total Estimated Yearly Operations Cost</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>$15M–$30M</td>
+                            <td colspan="2">Total Annual Scientific Costs</td>
+                            <td>Personnel + lab + computing</td>
+                            <td>$9,700,000/year</td>
+                        </tr>
+                        <tr class="total">
+                            <td colspan="2">Total Annual Operating Costs</td>
+                            <td>Facility + scientific operations</td>
+                            <td>$74,700,000/year</td>
                         </tr>
                     </tbody>
                 </table>
@@ -564,17 +506,17 @@
                 <!-- Senator links will be dynamically inserted here -->
             </div>
             <p>Copy the letter above and paste it into your senators’ contact forms.</p>
-           <p>Share this page on social media to spread the word!</p>
-<p>For LinkedIn, Facebook, and Instagram, copy and paste this message:</p>
-<p><strong>Support ecotron research to tackle environmental problems, ensure safe biotech, and advance space exploration. A letter for your senators is included! Learn more: https://aime2solve.github.io/EcotronScience #Ecotrons #ComparativeBiospheromics</strong></p>
-<p>For Instagram, copy the message above and share it as a post or story with the link: <a href="https://aime2solve.github.io/EcotronScience" target="_blank" rel="noopener">https://aime2solve.github.io/EcotronScience</a>.</p>
-<p>
-    <a href="https://twitter.com/intent/tweet?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20Learn%20more%20and%20share%20the%20included%20letter%20with%20your%20senators.%20%23Ecotrons%20%23ComparativeBiospheromics%20Visit%20https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on X"><img src="icons/x.png" alt="X"></a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
-    <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20Learn%20more%20and%20share%20the%20included%20letter%20with%20your%20senators.%20%23Ecotrons%20%23ComparativeBiospheromics%20Visit%20https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on BlueSky"><img src="icons/bluesky.png" alt="BlueSky"></a>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social-icon" aria-label="Open Instagram to share"><img src="icons/instagram.png" alt="Instagram"></a>
-</p>
+            <p>Share this page on social media to spread the word!</p>
+            <p>For LinkedIn, Facebook, and Instagram, copy and paste this message:</p>
+            <p><strong>Support ecotron research to tackle environmental problems, ensure safe biotech, and advance space exploration. A letter for your senators is included! Learn more: https://aime2solve.github.io/EcotronScience #Ecotrons #ComparativeBiospheromics</strong></p>
+            <p>For Instagram, copy the message above and share it as a post or story with the link: <a href="https://aime2solve.github.io/EcotronScience" target="_blank" rel="noopener">https://aime2solve.github.io/EcotronScience</a>.</p>
+            <p>
+                <a href="https://twitter.com/intent/tweet?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20Learn%20more%20and%20share%20the%20included%20letter%20with%20your%20senators.%20%23Ecotrons%20%23ComparativeBiospheromics%20Visit%20https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on X"><img src="icons/x.png" alt="X"></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
+                <a href="https://bsky.app/intent/compose?text=Support%20ecotron%20research%20to%20tackle%20environmental%20problems%2C%20ensure%20safe%20biotech%2C%20and%20advance%20space%20exploration.%20Learn%20more%20and%20share%20the%20included%20letter%20with%20your%20senators.%20%23Ecotrons%20%23ComparativeBiospheromics%20Visit%20https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on BlueSky"><img src="icons/bluesky.png" alt="BlueSky"></a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social-icon" aria-label="Open Instagram to share"><img src="icons/instagram.png" alt="Instagram"></a>
+            </p>
             <p><strong>Private foundations that might be persuaded to join the effort:</strong></p>
             <ul>
                 <li><a href="https://www.gatesfoundation.org/" target="_blank" rel="noopener">Gates Foundation</a> ($77.2B)</li>
