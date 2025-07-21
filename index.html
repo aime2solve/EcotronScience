@@ -21,303 +21,303 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preload" href="./background.jpg" as="image">
     <style>
-        body {
-            font-family: 'Roboto Slab', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-            font-size: 16px;
-        }
-        strong {
-            font-weight: bold !important;
-        }
+    body {
+        font-family: 'Roboto Slab', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+        font-size: 16px;
+    }
+    strong {
+        font-weight: bold !important;
+    }
+    header {
+        background-image: url('./background.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #FFD700;
+        text-align: center;
+        padding: 4rem 2rem;
+        position: relative;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+    header h1, header p {
+        position: relative;
+        z-index: 2;
+    }
+    header h1 {
+        margin: 0;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+        color: #FFD700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8);
+        animation: pulse 19s ease-in-out infinite;
+    }
+    header p {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        color: #FFD700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8);
+        font-weight: bold;
+    }
+    nav {
+        background: #333;
+        padding: 1rem;
+        text-align: center;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    nav a:hover, nav a:focus {
+        color: #3498db;
+        outline: none;
+    }
+    .container {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    .section {
+        background: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .section#support p strong {
+        font-weight: 700 !important;
+    }
+    .section h2 {
+        color: #2c3e50;
+        margin-top: 0;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.8rem;
+    }
+    .social-icon img {
+        width: 2rem;
+        height: 2rem;
+        object-fit: contain;
+        margin: 0.5rem;
+        vertical-align: middle;
+        loading: lazy;
+    }
+    .social-icon img:hover {
+        opacity: 0.8;
+    }
+    .letter {
+        background: #ecf0f1;
+        padding: 1rem;
+        border-left: 4px solid #3498db;
+        margin: 1rem 0;
+    }
+    .state-form {
+        margin: 1rem 0;
+    }
+    .state-form select, .state-form button {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: 0.3rem 0;
+    }
+    .state-form select {
+        width: 200px;
+    }
+    .state-form button {
+        background: #2c3e50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .state-form button:hover, .state-form button:focus {
+        background: #3498db;
+        outline: none;
+    }
+    .senator-links {
+        margin: 1rem 0;
+    }
+    .articles ul, .additional-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .articles li, .additional-links li {
+        margin: 1.5rem 0;
+    }
+    .articles a, .additional-links a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .articles a:hover, .additional-links a:hover {
+        color: #2980b9;
+    }
+    .budget-table {
+        margin: 1rem 0;
+        overflow-x: auto;
+        max-width: 100%;
+    }
+    .budget-table table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .budget-table th, .budget-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.95rem;
+    }
+    .budget-table th {
+        background: #2c3e50;
+        color: white;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 700;
+    }
+    .budget-table tr.total td {
+        background: #ecf0f1;
+        font-weight: bold;
+    }
+    .budget-table tr:hover {
+        background: #f9f9f9;
+    }
+    #budgetButton, #strategyButton {
+        padding: 0.5rem 1rem;
+        background: #2c3e50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: 'Roboto Slab', serif;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        transition: background 0.3s;
+    }
+    #budgetButton:hover, #budgetButton:focus,
+    #strategyButton:hover, #strategyButton:focus {
+        background: #3498db;
+        outline: none;
+    }
+    #budgetButton[aria-expanded="true"],
+    #strategyButton[aria-expanded="true"] {
+        background: #3498db;
+    }
+    footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    footer a {
+        color: cyan;
+    }
+    footer a:hover {
+        color: #00b7eb;
+    }
+    @media (max-width: 600px) {
         header {
-            background-image: url('./background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #FFD700;
-            text-align: center;
-            padding: 4rem 2rem;
-            position: relative;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-        header h1, header p {
-            position: relative;
-            z-index: 2;
+            min-height: 150px;
+            padding: 1.5rem 0.5rem;
         }
         header h1 {
-            margin: 0;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            letter-spacing: 2px;
-            color: #FFD700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8);
-            animation: pulse 19s ease-in-out infinite;
+            font-size: 1.8rem;
+            animation: pulse 10s ease-in-out infinite; /* Faster animation for mobile */
         }
         header p {
-            font-family: 'Roboto Slab', serif;
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-            color: #FFD700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.8);
-            font-weight: bold;
+            font-size: 1rem;
         }
         nav {
-            background: #333;
-            padding: 1rem;
-            text-align: center;
+            padding: 0.5rem;
         }
         nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        nav a:hover, nav a:focus {
-            color: #3498db;
-            outline: none;
+            display: block;
+            margin: 0.3rem 0;
+            font-size: 0.9rem;
         }
         .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 0.5rem;
+            margin: 1rem auto;
         }
         .section {
-            background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .section#support p strong {
-            font-weight: 700 !important;
+            padding: 1rem;
+            margin-bottom: 1rem;
         }
         .section h2 {
-            color: #2c3e50;
-            margin-top: 0;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
-        .social-icon img {
-            width: 2rem;
-            height: 2rem;
-            object-fit: contain;
-            margin: 0.5rem;
-            vertical-align: middle;
-            loading: lazy;
-        }
-        .social-icon img:hover {
-            opacity: 0.8;
-        }
-        .letter {
-            background: #ecf0f1;
-            padding: 1rem;
-            border-left: 4px solid #3498db;
-            margin: 1rem 0;
-        }
-        .state-form {
-            margin: 1rem 0;
-        }
-        .state-form select, .state-form button {
-            padding: 0.5rem;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin: 0.3rem 0;
-        }
-        .state-form select {
-            width: 200px;
-        }
-        .state-form button {
-            background: #2c3e50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .state-form button:hover, .state-form button:focus {
-            background: #3498db;
-            outline: none;
-        }
-        .senator-links {
-            margin: 1rem 0;
-        }
-        .articles ul, .additional-links ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .articles li, .additional-links li {
-            margin: 1.5rem 0;
-        }
-        .articles a, .additional-links a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .articles a:hover, .additional-links a:hover {
-            color: #2980b9;
-        }
-        .budget-table {
-            margin: 1rem 0;
-            overflow-x: auto;
-            max-width: 100%;
-        }
-        .budget-table table {
+        .state-form select, .state-form button, #budgetButton, #strategyButton {
             width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 0.3rem 0;
+            font-size: 0.9rem;
         }
         .budget-table th, .budget-table td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            font-family: 'Roboto Slab', serif;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
+            padding: 0.5rem;
         }
-        .budget-table th {
-            background: #2c3e50;
-            color: white;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
+        .social-icon img {
+            width: 1.5rem;
+            height: 1.5rem;
         }
-        .budget-table tr.total td {
-            background: #ecf0f1;
-            font-weight: bold;
+    }
+    @media (max-width: 400px) {
+        header h1 {
+            font-size: 1.5rem;
+            animation: pulse 8s ease-in-out infinite; /* Even faster for smaller screens */
         }
-        .budget-table tr:hover {
-            background: #f9f9f9;
+        header p {
+            font-size: 0.9rem;
         }
-        #budgetButton {
-            padding: 0.5rem 1rem;
-            background: #2c3e50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'Roboto Slab', serif;
-            font-size: 1rem;
-            margin: 0.5rem 0;
-            transition: background 0.3s;
+        .section h2 {
+            font-size: 1.3rem;
         }
-        #budgetButton:hover, #budgetButton:focus {
-            background: #3498db;
-            outline: none;
+        .budget-table th, .budget-table td {
+            font-size: 0.8rem;
+            padding: 0.4rem;
         }
-        #budgetButton[aria-expanded="true"] {
-            background: # /
-
-3498db;
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
         }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+        21.05% {
+            transform: scale(1.03);
         }
-        footer a {
-            color: cyan;
+        57.89% {
+            transform: scale(1.03);
         }
-        footer a:hover {
-            color: #00b7eb;
+        100% {
+            transform: scale(1);
         }
-        @media (max-width: 600px) {
-            header {
-                min-height: 150px;
-                padding: 1.5rem 0.5rem;
-            }
-            header h1 {
-                font-size: 1.8rem;
-                animation: pulse 10s ease-in-out infinite; /* Faster animation for mobile */
-            }
-            header p {
-                font-size: 1rem;
-            }
-            nav {
-                padding: 0.5rem;
-            }
-            nav a {
-                display: block;
-                margin: 0.3rem 0;
-                font-size: 0.9rem;
-            }
-            .container {
-                padding: 0 0.5rem;
-                margin: 1rem auto;
-            }
-            .section {
-                padding: 1rem;
-                margin-bottom: 1rem;
-            }
-            .section h2 {
-                font-size: 1.5rem;
-            }
-            .state-form select, .state-form button, #budgetButton {
-                width: 100%;
-                margin: 0.3rem 0;
-                font-size: 0.9rem;
-            }
-            .budget-table th, .budget-table td {
-                font-size: 0.85rem;
-                padding: 0.5rem;
-            }
-            .social-icon img {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-        }
-        @media (max-width: 400px) {
-            header h1 {
-                font-size: 1.5rem;
-                animation: pulse 8s ease-in-out infinite; /* Even faster for smaller screens */
-            }
-            header p {
-                font-size: 0.9rem;
-            }
-            .section h2 {
-                font-size: 1.3rem;
-            }
-            .budget-table th, .budget-table td {
-                font-size: 0.8rem;
-                padding: 0.4rem;
-            }
-        }
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            21.05% {
-                transform: scale(1.03);
-            }
-            57.89% {
-                transform: scale(1.03);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header aria-label="Ecotron Science Header with background image of a high-tech lab">
