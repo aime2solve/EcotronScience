@@ -354,87 +354,138 @@
 
         <!-- Call to Action: Support Ecotrons -->
         <div class="section" id="support">
-            <h2>Support Ecotron Research</h2>
-            <p>Synthetic biology will require far more public support for applications to be fully realized outside of laboratories. Without funding and public trust, we risk losing tools to tackle environmental problems, ensure safe biotechnologies, and advance space exploration.</p>
-            <p>Learn about the funding needed to establish and operate ecotron facilities:</p>
-            <button id="budgetButton" aria-expanded="false" aria-controls="budgetTable">Proposed Budget</button>
-            <div id="budgetTable" class="budget-table" style="display: none;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Item</th>
-                            <th>Details</th>
-                            <th>Estimated Cost</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Capital Costs (One-Time)</td>
-                            <td>Ecotron construction</td>
-                            <td>100 units × ~$6.5 million per ecotron (including environmental control, sensors, enclosures)</td>
-                            <td>$650,000,000</td>
-                        </tr>
-                        <tr>
-                            <td>Capital Costs (One-Time)</td>
-                            <td>Land acquisition</td>
-                            <td>~10 acres of undeveloped land in remote desert (~$16,100 per acre)</td>
-                            <td>$161,000</td>
-                        </tr>
-                        <tr>
-                            <td>Capital Costs (One-Time)</td>
-                            <td>Multi-use lab, office, classroom, conference space</td>
-                            <td></td>
-                            <td>$200,000,000</td>
-                        </tr>
-                        <tr class="total">
-                            <td colspan="2">Total Capital Costs (One-Time)</td>
-                            <td></td>
-                            <td>$850,161,000</td>
-                        </tr>
-                        <tr class="total">
-                            <td colspan="2">Annual Operating Costs (Facility Only)</td>
-                            <td>Utilities, climate systems, maintenance (10% of build cost)</td>
-                            <td>$65,000,000/year</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Scientific Operations</td>
-                            <td>Personnel</td>
-                            <td>500 employees @ $120,000/year average</td>
-                            <td>$60,000,000/year</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Scientific Operations</td>
-                            <td>Laboratory analysis</td>
-                            <td>1,200 biospheromic samples/year @ $1,500/sample</td>
-                            <td>R&D, other reagents and tests @300/sample</td>
-                            <td>$2,160,000/year</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Scientific Operations</td>
-                            <td>Lab space and overhead</td>
-                            <td>100,000 sq ft × ~$200/sq ft operational costs</td>
-                            <td>$20,000,000/year</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Scientific Operations</td>
-                            <td>Computing infrastructure</td>
-                            <td>HPC, cloud storage, data processing tools</td>
-                            <td>$2,000,000/year</td>
-                        </tr>
-                        <tr class="total">
-                            <td colspan="2">Total Annual Scientific Costs</td>
-                            <td>Personnel + lab + computing</td>
-                            <td>$84,160,000/year</td>
-                        </tr>
-                        <tr class="total">
-                            <td colspan="2">Total Annual Operating Costs</td>
-                            <td>Facility + scientific operations</td>
-                            <td>$149,160,000/year</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <h2>Support Ecotron Research</h2>
+    <p>Synthetic biology will require far more public support for applications to be fully realized outside of laboratories. Without funding and public trust, we risk losing tools to tackle environmental problems, ensure safe biotechnologies, and advance space exploration.</p>
+    <p>Learn about the funding needed to establish and operate ecotron facilities:</p>
+    <button id="budgetButton" aria-expanded="false" aria-controls="budgetTable">Brainstorm Budget</button>
+    <div id="budgetTable" class="budget-table" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Item</th>
+                    <th>Details</th>
+                    <th>Estimated Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Capital Costs (One-Time)</td>
+                    <td>Ecotron construction</td>
+                    <td>100 units × ~$6.5 million per ecotron (including environmental control, sensors, enclosures)</td>
+                    <td>$650,000,000</td>
+                </tr>
+                <tr>
+                    <td>Capital Costs (One-Time)</td>
+                    <td>Land acquisition</td>
+                    <td>~10 acres of undeveloped land in remote desert (~$16,100 per acre)</td>
+                    <td>$161,000</td>
+                </tr>
+                <tr>
+                    <td>Capital Costs (One-Time)</td>
+                    <td>Multi-use lab, office, classroom, conference space</td>
+                    <td></td>
+                    <td>$200,000,000</td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2">Total Capital Costs (One-Time)</td>
+                    <td></td>
+                    <td>$850,161,000</td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2">Annual Operating Costs (Facility Only)</td>
+                    <td>Utilities, climate systems, maintenance (10% of build cost)</td>
+                    <td>$65,000,000/year</td>
+                </tr>
+                <tr>
+                    <td>Annual Scientific Operations</td>
+                    <td>Personnel</td>
+                    <td>500 employees @ $120,000/year average</td>
+                    <td>$60,000,000/year</td>
+                </tr>
+                <tr>
+                    <td>Annual Scientific Operations</td>
+                    <td>Laboratory analysis</td>
+                    <td>1,200 biospheromic samples/year @ $1,500/sample</td>
+                    <td>$2,160,000/year</td>
+                </tr>
+                <tr>
+                    <td>Annual Scientific Operations</td>
+                    <td>Lab space and overhead</td>
+                    <td>100,000 sq ft × ~$200/sq ft operational costs</td>
+                    <td>$20,000,000/year</td>
+                </tr>
+                <tr>
+                    <td>Annual Scientific Operations</td>
+                    <td>Computing infrastructure</td>
+                    <td>HPC, cloud storage, data processing tools</td>
+                    <td>$2,000,000/year</td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2">Total Annual Scientific Costs</td>
+                    <td>Personnel + lab + computing</td>
+                    <td>$84,160,000/year</td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2">Total Annual Operating Costs</td>
+                    <td>Facility + scientific operations</td>
+                    <td>$149,160,000/year</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button id="strategyButton" aria-expanded="false" aria-controls="strategySection">3-Tier Strategy</button>
+    <div id="strategySection" class="budget-table" style="display: none;">
+        <h3>Comparative Biospheromics</h3>
+        <h4>A 3-Tier Investment & Partnership Prospectus</h4>
+        <h5>Overview</h5>
+        <p>Comparative Biospheromics is a new field at the intersection of ecological genomics, synthetic biology, and systems engineering. Its goal is to evaluate the ecological behavior and biosafety of engineered organisms in complex, semi-natural testbed environments called ecotrons. This prospectus outlines a three-tier plan to fund and scale a world-class testing ecosystem based in Tucson, Arizona, leveraging the University of Arizona's land, talent, and position in the heart of one of the most biosafety-conducive landscapes on Earth.</p>
+        <p>This prospectus outlines a vision for collaboration. It is shared here in the hope of finding institutional and individual partners to develop this idea further. This proposal is independent of any current institutional endorsement and does not represent any official position of the University of Arizona. The <a href="https://comparativebiospheromics.org" target="_blank" rel="noopener">Comparative Biospheromics Network</a> welcomes ideas and collaborators committed to safe and forward-looking synthetic biology research.</p>
+        <h5>Why the Sonoran Desert?</h5>
+        <ul>
+            <li><strong>Natural Containment:</strong> The Sonoran Desert minimizes host uptake in the event of a leak.</li>
+            <li><strong>Academic Alignment:</strong> The University of Arizona is a national leader in environmental and synthetic biology research.</li>
+            <li><strong>Available Land:</strong> Hundreds to thousands of acres, allowing ample space for modular infrastructure and future expansion.</li>
+            <li><strong>Climate:</strong> Low humidity and minimal vegetation create an ideal setting for controlled release studies.</li>
+        </ul>
+        <h5>Tier 1: Launch & Prototype ($500K – $2M)</h5>
+        <ul>
+            <li>Spin out a service-oriented organizational arm.</li>
+            <li>Develop early branding, partner outreach, and ops infrastructure.</li>
+            <li>Hire 2–3 key people (biz dev, science/tech lead, program coordinator).</li>
+            <li>Build 1–2 prototype ecotrons for demonstration and early testing.</li>
+        </ul>
+        <h5>Tier 2: Scientific Validation & Data Sharing Platform ($5M)</h5>
+        <ul>
+            <li>Construct a 24-ecotron array designed for comparative testing across ecosystems.</li>
+            <li>Publish data to support research, standards development, and educational use.</li>
+            <li>Begin hosting university partners and early commercial tests.</li>
+            <li>Link into NSF, USDA, DOE, and international research funding streams.</li>
+        </ul>
+        <h5>Tier 3: Comparative Biospheromics Testing Campus ($100M+ Seed Fund)</h5>
+        <ul>
+            <li>Develop a 100-acre zone of testbed arrays at multiple scales (micro to field trial).</li>
+            <li>Maintain strict biosafety protocols, digital twin data pipelines, and automated monitoring.</li>
+            <li>Support global product testing: researchers and startups send engineered biology for performance/biosafety evaluation.</li>
+            <li>Generate high-resolution ecological genomics data for industry, science, and regulatory collaboration.</li>
+        </ul>
+        <h5>Funding Strategy</h5>
+        <ul>
+            <li><strong>Government:</strong> Approach NSF, DOE, USDA for ecotron infrastructure and early research.</li>
+            <li><strong>Philanthropy:</strong> Approach Bezos Earth Fund, Open Philanthropy, Moore, Sloan, Gates, and others to seed public-good science and underfunded research.</li>
+            <li><strong>Venture Capital:</strong> Focus on product-specific spinouts (e.g., engineered plants, soil additives) will fund commercialization.</li>
+        </ul>
+        <h5>Impact</h5>
+        <ul>
+            <li>Create a global hub for evaluatingინ engineered biology before environmental release.</li>
+            <li>Protect ecosystems while accelerating synthetic biology innovation.</li>
+            <li>Generate public trust and scientific transparency in the age of bioengineering.</li>
+            <li>Position a non-profit institute in the Sonoran Desert as a world leader in biosafety and ecological performance science.</li>
+        </ul>
+    </div>
+    <p>Select your state below to personalize a letter to your senators and help champion ecotron science.</p>
+    <!-- Rest of the section (state form, letter, senator links, social sharing, etc.) remains unchanged -->
+</div>
             <p>Select your state below to personalize a letter to your senators and help champion ecotron science.</p>
             <div class="state-form">
                 <select id="stateSelect" aria-label="Select your state">
@@ -566,242 +617,252 @@
     </footer>
 
     <script>
-        // Static senator data for all 50 states (based on 118th Congress, 2023-2024)
-        // Note: Verify 119th Congress (2025) senators, as 2024 elections may change some names
-        const senatorData = {
-            AL: [
-                { name: "Tommy Tuberville", contactUrl: "https://www.tuberville.senate.gov/contact/contact-form/" },
-                { name: "Katie Britt", contactUrl: "https://www.britt.senate.gov/contact/share-your-opinion/" }
-            ],
-            AK: [
-                { name: "Lisa Murkowski", contactUrl: "https://www.murkowski.senate.gov/contact" },
-                { name: "Dan Sullivan", contactUrl: "https://www.sullivan.senate.gov/contact" }
-            ],
-            AZ: [
-                { name: "Ruben Gallego", contactUrl: "https://www.gallego.senate.gov/share-your-opinion/" },
-                { name: "Mark Kelly", contactUrl: "https://www.kelly.senate.gov/contact/contact-form/" }
-            ],
-            AR: [
-                { name: "John Boozman", contactUrl: "https://www.boozman.senate.gov/e-mail-me" },
-                { name: "Tom Cotton", contactUrl: "https://www.cotton.senate.gov/contact/contact-tom" }
-            ],
-            CA: [
-                { name: "Alex Padilla", contactUrl: "https://www.padilla.senate.gov/contact/contact-form/" },
-                { name: "Adam Schiff", contactUrl: "https://www.schiff.senate.gov/contact/get-in-touch/" }
-            ],
-            CO: [
-                { name: "Michael Bennet", contactUrl: "https://www.bennet.senate.gov/contact/write-to-michael/" },
-                { name: "John Hickenlooper", contactUrl: "https://www.hickenlooper.senate.gov/email-john/" }
-            ],
-            CT: [
-                { name: "Richard Blumenthal", contactUrl: "https://www.blumenthal.senate.gov/contact/write-to-senator-blumenthal" },
-                { name: "Chris Murphy", contactUrl: "https://www.murphy.senate.gov/contact" }
-            ],
-            DE: [
-                { name: "Lisa Blunt Rochester", contactUrl: "https://www.bluntrochester.senate.gov/share-your-opinion/" },
-                { name: "Chris Coons", contactUrl: "https://www.coons.senate.gov/contact/share-your-opinion" }
-            ],
-            FL: [
-                { name: "Ashley Moody", contactUrl: "https://www.moody.senate.gov/share-your-opinion/" },
-                { name: "Rick Scott", contactUrl: "https://www.rickscott.senate.gov/contact/share-your-opinion" }
-            ],
-            GA: [
-                { name: "Jon Ossoff", contactUrl: "https://www.ossoff.senate.gov/contact-us/share-your-views/" },
-                { name: "Raphael Warnock", contactUrl: "https://www.warnock.senate.gov/contact/contact-form/" }
-            ],
-            HI: [
-                { name: "Brian Schatz", contactUrl: "https://www.schatz.senate.gov/contact/share-your-thoughts" },
-                { name: "Mazie Hirono", contactUrl: "https://www.hirono.senate.gov/contact/email-me-about-an-issue" }
-            ],
-            ID: [
-                { name: "Mike Crapo", contactUrl: "https://www.crapo.senate.gov/contact/email-me" },
-                { name: "Jim Risch", contactUrl: "https://www.risch.senate.gov/public/index.cfm/contact?p=Email" }
-            ],
-            IL: [
-                { name: "Dick Durbin", contactUrl: "https://www.durbin.senate.gov/contact/email" },
-                { name: "Tammy Duckworth", contactUrl: "https://www.duckworth.senate.gov/help/email-tammy" }
-            ],
-            IN: [
-                { name: "Todd Young", contactUrl: "https://www.young.senate.gov/contact/email-todd/" },
-                { name: "Jim Banks", contactUrl: "https://www.banks.senate.gov/share-your-opinion/" }
-            ],
-            IA: [
-                { name: "Chuck Grassley", contactUrl: "https://www.grassley.senate.gov/contact/questions-and-comments" },
-                { name: "Joni Ernst", contactUrl: "https://www.ernst.senate.gov/contact/email-joni" }
-            ],
-            KS: [
-                { name: "Jerry Moran", contactUrl: "https://www.moran.senate.gov/public/index.cfm/contact" },
-                { name: "Roger Marshall", contactUrl: "https://www.marshall.senate.gov/contact/contact-form/" }
-            ],
-            KY: [
-                { name: "Mitch McConnell", contactUrl: "https://www.mcconnell.senate.gov/public/index.cfm?p=ContactForm" },
-                { name: "Rand Paul", contactUrl: "https://www.paul.senate.gov/connect/" }
-            ],
-            LA: [
-                { name: "Bill Cassidy", contactUrl: "https://www.cassidy.senate.gov/contact/get-in-touch/" },
-                { name: "John Kennedy", contactUrl: "https://www.kennedy.senate.gov/public/email-me-form" }
-            ],
-            ME: [
-                { name: "Susan Collins", contactUrl: "https://www.collins.senate.gov/contact/email-senator-collins" },
-                { name: "Angus King", contactUrl: "https://www.king.senate.gov/contact" }
-            ],
-            MD: [
-                { name: "Angela Alsobrooks", contactUrl: "https://www.alsobrooks.senate.gov/share-your-opinion/" },
-                { name: "Chris Van Hollen", contactUrl: "https://www.vanhollen.senate.gov/contact/email" }
-            ],
-            MA: [
-                { name: "Elizabeth Warren", contactUrl: "https://www.warren.senate.gov/contact/shareyouropinion" },
-                { name: "Ed Markey", contactUrl: "https://www.markey.senate.gov/contact/share-your-opinion" }
-            ],
-            MI: [
-                { name: "Elissa Slotkin", contactUrl: "https://www.slotkin.senate.gov/contact-your-senator/" },
-                { name: "Gary Peters", contactUrl: "https://www.peters.senate.gov/contact/email-gary" }
-            ],
-            MN: [
-                { name: "Amy Klobuchar", contactUrl: "https://www.klobuchar.senate.gov/public/index.cfm/email-amy" },
-                { name: "Tina Smith", contactUrl: "https://www.smith.senate.gov/share-your-opinion/" }
-            ],
-            MS: [
-                { name: "Roger Wicker", contactUrl: "https://www.wicker.senate.gov/public/index.cfm/contact" },
-                { name: "Cindy Hyde-Smith", contactUrl: "https://www.hydesmith.senate.gov/contact-senator" }
-            ],
-            MO: [
-                { name: "Josh Hawley", contactUrl: "https://www.hawley.senate.gov/contact-senator-hawley" },
-                { name: "Eric Schmitt", contactUrl: "https://www.schmitt.senate.gov/contact/share-your-opinion/" }
-            ],
-            MT: [
-                { name: "Tim Sheehy", contactUrl: "https://www.sheehy.senate.gov/share-your-opinion/" },
-                { name: "Steve Daines", contactUrl: "https://www.daines.senate.gov/services/email-steve/" }
-            ],
-            NE: [
-                { name: "Deb Fischer", contactUrl: "https://www.fischer.senate.gov/public/?p=email-deb" },
-                { name: "Pete Ricketts", contactUrl: "https://www.ricketts.senate.gov/contact/share-your-opinion/" }
-            ],
-            NV: [
-                { name: "Catherine Cortez Masto", contactUrl: "https://www.cortezmasto.senate.gov/contact/connect/" },
-                { name: "Jacky Rosen", contactUrl: "https://www.rosen.senate.gov/contact_jacky" }
-            ],
-            NH: [
-                { name: "Jeanne Shaheen", contactUrl: "https://www.shaheen.senate.gov/contact/contact-jeanne" },
-                { name: "Maggie Hassan", contactUrl: "https://www.hassan.senate.gov/contact/email" }
-            ],
-            NJ: [
-                { name: "Andy Kim", contactUrl: "https://www.kim.senate.gov/contact/#share-thoughts" },
-                { name: "Cory Booker", contactUrl: "https://www.booker.senate.gov/contact/write-to-cory" }
-            ],
-            NM: [
-                { name: "Martin Heinrich", contactUrl: "https://www.heinrich.senate.gov/contact/write-martin" },
-                { name: "Ben Ray Luján", contactUrl: "https://www.lujan.senate.gov/contact/contact-form/" }
-            ],
-            NY: [
-                { name: "Chuck Schumer", contactUrl: "https://www.schumer.senate.gov/contact/email-chuck" },
-                { name: "Kirsten Gillibrand", contactUrl: "https://www.gillibrand.senate.gov/contact/email-me" }
-            ],
-            NC: [
-                { name: "Thom Tillis", contactUrl: "https://www.tillis.senate.gov/email-me" },
-                { name: "Ted Budd", contactUrl: "https://www.budd.senate.gov/contact/" }
-            ],
-            ND: [
-                { name: "John Hoeven", contactUrl: "https://www.hoeven.senate.gov/contact/email-the-senator/form" },
-                { name: "Kevin Cramer", contactUrl: "https://www.cramer.senate.gov/contact/contact-kevin" }
-            ],
-            OH: [
-                { name: "John Husted", contactUrl: "https://www.husted.senate.gov/contact-jon/" },
-                { name: "Bernie Moreno", contactUrl: "https://www.moreno.senate.gov/share-your-opinion/" }
-            ],
-            OK: [
-                { name: "James Lankford", contactUrl: "https://www.lankford.senate.gov/contact/email/" },
-                { name: "Markwayne Mullin", contactUrl: "https://www.mullin.senate.gov/contact/contact-form/" }
-            ],
-            OR: [
-                { name: "Ron Wyden", contactUrl: "https://www.wyden.senate.gov/contact/email-ron" },
-                { name: "Jeff Merkley", contactUrl: "https://www.merkley.senate.gov/contact/" }
-            ],
-            PA: [
-                { name: "Dave McCormick", contactUrl: "https://www.mccormick.senate.gov/share-your-opinion/" },
-                { name: "John Fetterman", contactUrl: "https://www.fetterman.senate.gov/contact/" }
-            ],
-            RI: [
-                { name: "Jack Reed", contactUrl: "https://www.reed.senate.gov/contact/email" },
-                { name: "Sheldon Whitehouse", contactUrl: "https://www.whitehouse.senate.gov/contact/email-sheldon" }
-            ],
-            SC: [
-                { name: "Lindsey Graham", contactUrl: "https://www.lgraham.senate.gov/public/index.cfm?p=contact-form" },
-                { name: "Tim Scott", contactUrl: "https://www.scott.senate.gov/contact/email-me/" }
-            ],
-            SD: [
-                { name: "John Thune", contactUrl: "https://www.thune.senate.gov/public/index.cfm/contact" },
-                { name: "Mike Rounds", contactUrl: "https://www.rounds.senate.gov/contact/email-mike" }
-            ],
-            TN: [
-                { name: "Marsha Blackburn", contactUrl: "https://www.blackburn.senate.gov/email-me" },
-                { name: "Bill Hagerty", contactUrl: "https://www.hagerty.senate.gov/email-me/" }
-            ],
-            TX: [
-                { name: "John Cornyn", contactUrl: "https://www.cornyn.senate.gov/share-opinion/" },
-                { name: "Ted Cruz", contactUrl: "https://www.cruz.senate.gov/?p=form&id=16" }
-            ],
-            UT: [
-                { name: "Mike Lee", contactUrl: "https://www.lee.senate.gov/contact" },
-                { name: "John Curtis", contactUrl: "https://www.curtis.senate.gov/share-your-opinion/" }
-            ],
-            VT: [
-                { name: "Bernie Sanders", contactUrl: "https://www.sanders.senate.gov/contact/contact-form/" },
-                { name: "Peter Welch", contactUrl: "https://www.welch.senate.gov/email-peter/#email-peter" }
-            ],
-            VA: [
-                { name: "Mark Warner", contactUrl: "https://www.warner.senate.gov/public/index.cfm?p=ContactPage" },
-                { name: "Tim Kaine", contactUrl: "https://www.kaine.senate.gov/contact/share-your-opinion" }
-            ],
-            WA: [
-                { name: "Patty Murray", contactUrl: "https://www.murray.senate.gov/write-to-patty/" },
-                { name: "Maria Cantwell", contactUrl: "https://www.cantwell.senate.gov/contact/email/form" }
-            ],
-            WV: [
-                { name: "Jim Justice", contactUrl: "https://www.justice.senate.gov/share-your-opinion/" },
-                { name: "Shelley Moore Capito", contactUrl: "https://www.capito.senate.gov/contact/contact-my-office" }
-            ],
-            WI: [
-                { name: "Ron Johnson", contactUrl: "https://www.ronjohnson.senate.gov/email-the-senator" },
-                { name: "Tammy Baldwin", contactUrl: "https://www.baldwin.senate.gov/contact/contact-tammy" }
-            ],
-            WY: [
-                { name: "John Barrasso", contactUrl: "https://www.barrasso.senate.gov/contact/contact-form/" },
-                { name: "Cynthia Lummis", contactUrl: "https://www.lummis.senate.gov/contact/contact-form/" }
-            ]
-        };
+    // Static senator data for all 50 states (based on 118th Congress, 2023-2024)
+    // Note: Verify 119th Congress (2025) senators, as 2024 elections may change some names
+    const senatorData = {
+        AL: [
+            { name: "Tommy Tuberville", contactUrl: "https://www.tuberville.senate.gov/contact/contact-form/" },
+            { name: "Katie Britt", contactUrl: "https://www.britt.senate.gov/contact/share-your-opinion/" }
+        ],
+        AK: [
+            { name: "Lisa Murkowski", contactUrl: "https://www.murkowski.senate.gov/contact" },
+            { name: "Dan Sullivan", contactUrl: "https://www.sullivan.senate.gov/contact" }
+        ],
+        AZ: [
+            { name: "Ruben Gallego", contactUrl: "https://www.gallego.senate.gov/share-your-opinion/" },
+            { name: "Mark Kelly", contactUrl: "https://www.kelly.senate.gov/contact/contact-form/" }
+        ],
+        AR: [
+            { name: "John Boozman", contactUrl: "https://www.boozman.senate.gov/e-mail-me" },
+            { name: "Tom Cotton", contactUrl: "https://www.cotton.senate.gov/contact/contact-tom" }
+        ],
+        CA: [
+            { name: "Alex Padilla", contactUrl: "https://www.padilla.senate.gov/contact/contact-form/" },
+            { name: "Adam Schiff", contactUrl: "https://www.schiff.senate.gov/contact/get-in-touch/" }
+        ],
+        CO: [
+            { name: "Michael Bennet", contactUrl: "https://www.bennet.senate.gov/contact/write-to-michael/" },
+            { name: "John Hickenlooper", contactUrl: "https://www.hickenlooper.senate.gov/email-john/" }
+        ],
+        CT: [
+            { name: "Richard Blumenthal", contactUrl: "https://www.blumenthal.senate.gov/contact/write-to-senator-blumenthal" },
+            { name: "Chris Murphy", contactUrl: "https://www.murphy.senate.gov/contact" }
+        ],
+        DE: [
+            { name: "Lisa Blunt Rochester", contactUrl: "https://www.bluntrochester.senate.gov/share-your-opinion/" },
+            { name: "Chris Coons", contactUrl: "https://www.coons.senate.gov/contact/share-your-opinion" }
+        ],
+        FL: [
+            { name: "Ashley Moody", contactUrl: "https://www.moody.senate.gov/share-your-opinion/" },
+            { name: "Rick Scott", contactUrl: "https://www.rickscott.senate.gov/contact/share-your-opinion" }
+        ],
+        GA: [
+            { name: "Jon Ossoff", contactUrl: "https://www.ossoff.senate.gov/contact-us/share-your-views/" },
+            { name: "Raphael Warnock", contactUrl: "https://www.warnock.senate.gov/contact/contact-form/" }
+        ],
+        HI: [
+ preachers            { name: "Brian Schatz", contactUrl: "https://www.schatz.senate.gov/contact/share-your-thoughts" },
+            { name: "Mazie Hirono", contactUrl: "https://www.hirono.senate.gov/contact/email-me-about-an-issue" }
+        ],
+        ID: [
+            { name: "Mike Crapo", contactUrl: "https://www.crapo.senate.gov/contact/email-me" },
+            { name: "Jim Risch", contactUrl: "https://www.risch.senate.gov/public/index.cfm/contact?p=Email" }
+        ],
+        IL: [
+            { name: "Dick Durbin", contactUrl: "https://www.durbin.senate.gov/contact/email" },
+            { name: "Tammy Duckworth", contactUrl: "https://www.duckworth.senate.gov/help/email-tammy" }
+        ],
+        IN: [
+            { name: "Todd Young", contactUrl: "https://www.young.senate.gov/contact/email-todd/" },
+            { name: "Jim Banks", contactUrl: "https://www.banks.senate.gov/share-your-opinion/" }
+        ],
+        IA: [
+            { name: "Chuck Grassley", contactUrl: "https://www.grassley.senate.gov/contact/questions-and-comments" },
+            { name: "Joni Ernst", contactUrl: "https://www.ernst.senate.gov/contact/email-joni" }
+        ],
+        KS: [
+            { name: "Jerry Moran", contactUrl: "https://www.moran.senate.gov/public/index.cfm/contact" },
+            { name: "Roger Marshall", contactUrl: "https://www.marshall.senate.gov/contact/contact-form/" }
+        ],
+        KY: [
+            { name: "Mitch McConnell", contactUrl: "https://www.mcconnell.senate.gov/public/index.cfm?p=ContactForm" },
+            { name: "Rand Paul", contactUrl: "https://www.paul.senate.gov/connect/" }
+        ],
+        LA: [
+            { name: "Bill Cassidy", contactUrl: "https://www.cassidy.senate.gov/contact/get-in-touch/" },
+            { name: "John Kennedy", contactUrl: "https://www.kennedy.senate.gov/public/email-me-form" }
+        ],
+        ME: [
+            { name: "Susan Collins", contactUrl: "https://www.collins.senate.gov/contact/email-senator-collins" },
+            { name: "Angus King", contactUrl: "https://www.king.senate.gov/contact" }
+        ],
+        MD: [
+            { name: "Angela Alsobrooks", contactUrl: "https://www.alsobrooks.senate.gov/share-your-opinion/" },
+            { name: "Chris Van Hollen", contactUrl: "https://www.vanhollen.senate.gov/contact/email" }
+        ],
+        MA: [
+            { name: "Elizabeth Warren", contactUrl: "https://www.warren.senate.gov/contact/shareyouropinion" },
+            { name: "Ed Markey", contactUrl: "https://www.markey.senate.gov/contact/share-your-opinion" }
+        ],
+        MI: [
+            { name: "Elissa Slotkin", contactUrl: "https://www.slotkin.senate.gov/contact-your-senator/" },
+            { name: "Gary Peters", contactUrl: "https://www.peters.senate.gov/contact/email-gary" }
+        ],
+        MN: [
+            { name: "Amy Klobuchar", contactUrl: "https://www.klobuchar.senate.gov/public/index.cfm/email-amy" },
+            { name: "Tina Smith", contactUrl: "https://www.smith.senate.gov/share-your-opinion/" }
+        ],
+        MS: [
+            { name: "Roger Wicker", contactUrl: "https://www.wicker.senate.gov/public/index.cfm/contact" },
+            { name: "Cindy Hyde-Smith", contactUrl: "https://www.hydesmith.senate.gov/contact-senator" }
+        ],
+        MO: [
+            { name: "Josh Hawley", contactUrl: "https://www.hawley.senate.gov/contact-senator-hawley" },
+            { name: "Eric Schmitt", contactUrl: "https://www.schmitt.senate.gov/contact/share-your-opinion/" }
+        ],
+        MT: [
+            { name: "Tim Sheehy", contactUrl: "https://www.sheehy.senate.gov/share-your-opinion/" },
+            { name: "Steve Daines", contactUrl: "https://www.daines.senate.gov/services/email-steve/" }
+        ],
+        NE: [
+            { name: "Deb Fischer", contactUrl: "https://www.fischer.senate.gov/public/?p=email-deb" },
+            { name: "Pete Ricketts", contactUrl: "https://www.ricketts.senate.gov/contact/share-your-opinion/" }
+        ],
+        NV: [
+            { name: "Catherine Cortez Masto", contactUrl: "https://www.cortezmasto.senate.gov/contact/connect/" },
+            { name: "Jacky Rosen", contactUrl: "https://www.rosen.senate.gov/contact_jacky" }
+        ],
+        NH: [
+            { name: "Jeanne Shaheen", contactUrl: "https://www.shaheen.senate.gov/contact/contact-jeanne" },
+            { name: "Maggie Hassan", contactUrl: "https://www.hassan.senate.gov/contact/email" }
+        ],
+        NJ: [
+            { name: "Andy Kim", contactUrl: "https://www.kim.senate.gov/contact/#share-thoughts" },
+            { name: "Cory Booker", contactUrl: "https://www.booker.senate.gov/contact/write-to-cory" }
+        ],
+        NM: [
+            { name: "Martin Heinrich", contactUrl: "https://www.heinrich.senate.gov/contact/write-martin" },
+            { name: "Ben Ray Luján", contactUrl: "https://www.lujan.senate.gov/contact/contact-form/" }
+        ],
+        NY: [
+            { name: "Chuck Schumer", contactUrl: "https://www.schumer.senate.gov/contact/email-chuck" },
+            { name: "Kirsten Gillibrand", contactUrl: "https://www.gillibrand.senate.gov/contact/email-me" }
+        ],
+        NC: [
+            { name: "Thom Tillis", contactUrl: "https://www.tillis.senate.gov/email-me" },
+            { name: "Ted Budd", contactUrl: "https://www.budd.senate.gov/contact/" }
+        ],
+        ND: [
+            { name: "John Hoeven", contactUrl: "https://www.hoeven.senate.gov/contact/email-the-senator/form" },
+            { name: "Kevin Cramer", contactUrl: "https://www.cramer.senate.gov/contact/contact-kevin" }
+        ],
+        OH: [
+            { name: "John Husted", contactUrl: "https://www.husted.senate.gov/contact-jon/" },
+            { name: "Bernie Moreno", contactUrl: "https://www.moreno.senate.gov/share-your-opinion/" }
+        ],
+        OK: [
+            { name: "James Lankford", contactUrl: "https://www.lankford.senate.gov/contact/email/" },
+            { name: "Markwayne Mullin", contactUrl: "https://www.mullin.senate.gov/contact/contact-form/" }
+        ],
+        OR: [
+            { name: "Ron Wyden", contactUrl: "https://www.wyden.senate.gov/contact/email-ron" },
+            { name: "Jeff Merkley", contactUrl: "https://www.merkley.senate.gov/contact/" }
+        ],
+        PA: [
+            { name: "Dave McCormick", contactUrl: "https://www.mccormick.senate.gov/share-your-opinion/" },
+            { name: "John Fetterman", contactUrl: "https://www.fetterman.senate.gov/contact/" }
+        ],
+        RI: [
+            { name: "Jack Reed", contactUrl: "https://www.reed.senate.gov/contact/email" },
+            { name: "Sheldon Whitehouse", contactUrl: "https://www.whitehouse.senate.gov/contact/email-sheldon" }
+        ],
+        SC: [
+            { name: "Lindsey Graham", contactUrl: "https://www.lgraham.senate.gov/public/index.cfm?p=contact-form" },
+            { name: "Tim Scott", contactUrl: "https://www.scott.senate.gov/contact/email-me/" }
+        ],
+        SD: [
+            { name: "John Thune", contactUrl: "https://www.thune.senate.gov/public/index.cfm/contact" },
+            { name: "Mike Rounds", contactUrl: "https://www.rounds.senate.gov/contact/email-mike" }
+        ],
+        TN: [
+            { name: "Marsha Blackburn", contactUrl: "https://www.blackburn.senate.gov/email-me" },
+            { name: "Bill Hagerty", contactUrl: "https://www.hagerty.senate.gov/email-me/" }
+        ],
+        TX: [
+            { name: "John Cornyn", contactUrl: "https://www.cornyn.senate.gov/share-opinion/" },
+            { name: "Ted Cruz", contactUrl: "https://www.cruz.senate.gov/?p=form&id=16" }
+        ],
+        UT: [
+            { name: "Mike Lee", contactUrl: "https://www.lee.senate.gov/contact" },
+            { name: "John Curtis", contactUrl: "https://www.curtis.senate.gov/share-your-opinion/" }
+        ],
+        VT: [
+            { name: "Bernie Sanders", contactUrl: "https://www.sanders.senate.gov/contact/contact-form/" },
+            { name: "Peter Welch", contactUrl: "https://www.welch.senate.gov/email-peter/#email-peter" }
+        ],
+        VA: [
+            { name: "Mark Warner", contactUrl: "https://www.warner.senate.gov/public/index.cfm?p=ContactPage" },
+            { name: "Tim Kaine", contactUrl: "https://www.kaine.senate.gov/contact/share-your-opinion" }
+        ],
+        WA: [
+            { name: "Patty Murray", contactUrl: "https://www.murray.senate.gov/write-to-patty/" },
+            { name: "Maria Cantwell", contactUrl: "https://www.cantwell.senate.gov/contact/email/form" }
+        ],
+        WV: [
+            { name: "Jim Justice", contactUrl: "https://www.justice.senate.gov/share-your-opinion/" },
+            { name: "Shelley Moore Capito", contactUrl: "https://www.capito.senate.gov/contact/contact-my-office" }
+        ],
+        WI: [
+            { name: "Ron Johnson", contactUrl: "https://www.ronjohnson.senate.gov/email-the-senator" },
+            { name: "Tammy Baldwin", contactUrl: "https://www.baldwin.senate.gov/contact/contact-tammy" }
+        ],
+        WY: [
+            { name: "John Barrasso", contactUrl: "https://www.barrasso.senate.gov/contact/contact-form/" },
+            { name: "Cynthia Lummis", contactUrl: "https://www.lummis.senate.gov/contact/contact-form/" }
+        ]
+    };
 
-        function loadStateSenators() {
-            const state = document.getElementById('stateSelect').value;
-            if (!state) {
-                alert('Please select a state.');
-                return;
-            }
-            const senators = senatorData[state];
-            if (!senators || senators.length === 0) {
-                alert('Senator data for this state is not available. Please visit https://www.senate.gov/senators/senators-contact.htm to find your senators.');
-                return;
-            }
-            const senatorNames = senators.map(s => s.name).join(' and ');
-            document.getElementById('salutation').textContent = `Dear Senators ${senatorNames},`;
-            let linksHtml = '<p>Contact your senators:</p><ul>';
-            senators.forEach(senator => {
-                linksHtml += `<li><a href="${senator.contactUrl}" target="_blank" rel="noopener">${senator.name} Contact Form</a></li>`;
-            });
-            linksHtml += '</ul>';
-            document.getElementById('senatorLinks').innerHTML = linksHtml;
+    function loadStateSenators() {
+        const state = document.getElementById('stateSelect').value;
+        if (!state) {
+            alert('Please select a state.');
+            return;
         }
-
-        function toggleBudgetTable() {
-            const table = document.getElementById('budgetTable');
-            const button = document.getElementById('budgetButton');
-            const isHidden = table.style.display === 'none' || table.style.display === '';
-            table.style.display = isHidden ? 'block' : 'none';
-            button.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
-            button.textContent = isHidden ? 'Hide Budget' : 'Proposed Budget';
+        const senators = senatorData[state];
+        if (!senators || senators.length === 0) {
+            alert('Senator data for this state is not available. Please visit https://www.senate.gov/senators/senators-contact.htm to find your senators.');
+            return;
         }
+        const senatorNames = senators.map(s => s.name).join(' and ');
+        document.getElementById('salutation').textContent = `Dear Senators ${senatorNames},`;
+        let linksHtml = '<p>Contact your senators:</p><ul>';
+        senators.forEach(senator => {
+            linksHtml += `<li><a href="${senator.contactUrl}" target="_blank" rel="noopener">${senator.name} Contact Form</a></li>`;
+        });
+        linksHtml += '</ul>';
+        document.getElementById('senatorLinks').innerHTML = linksHtml;
+    }
 
-        document.getElementById('budgetButton').addEventListener('click', toggleBudgetTable);
-    </script>
+    function toggleBudgetTable() {
+        const table = document.getElementById('budgetTable');
+        const button = document.getElementById('budgetButton');
+        const isHidden = table.style.display === 'none' || table.style.display === '';
+        table.style.display = isHidden ? 'block' : 'none';
+        button.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+        button.textContent = isHidden ? 'Hide Budget' : 'Brainstorm Budget';
+    }
+
+    function toggleStrategySection() {
+        const section = document.getElementById('strategySection');
+        const button = document.getElementById('strategyButton');
+        const isHidden = section.style.display === 'none' || section.style.display === '';
+        section.style.display = isHidden ? 'block' : 'none';
+        button.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+        button.textContent = isHidden ? 'Hide Strategy' : '3-Tier Strategy';
+    }
+
+    document.getElementById('budgetButton').addEventListener('click', toggleBudgetTable);
+    document.getElementById('strategyButton').addEventListener('click', toggleStrategySection);
+</script>
 </body>
 </html>
