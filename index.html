@@ -206,27 +206,25 @@
     .budget-table tr:hover {
         background: #f9f9f9;
     }
-    #budgetButton, #strategyButton {
-        padding: 0.5rem 1rem;
-        background: #2c3e50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-family: 'Roboto Slab', serif;
-        font-size: 1rem;
-        margin: 0.5rem 0;
-        transition: background 0.3s;
-    }
-    #budgetButton:hover, #budgetButton:focus,
-    #strategyButton:hover, #strategyButton:focus {
-        background: #3498db;
-        outline: none;
-    }
-    #budgetButton[aria-expanded="true"],
-    #strategyButton[aria-expanded="true"] {
-        background: #3498db;
-    }
+  #strategyButton {
+    padding: 0.5rem 1rem;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    transition: background 0.3s;
+}
+#strategyButton:hover, #strategyButton:focus {
+    background: #3498db;
+    outline: none;
+}
+#strategyButton[aria-expanded="true"] {
+    background: #3498db;
+}
     .divider {
         border: 0;
         border-top: 2px solid #3498db;
@@ -361,93 +359,17 @@
         </div>
 
         <!-- Call to Action: Support Ecotrons -->
-        <div class="section" id="support">
+       <div class="section" id="support">
     <h2>Support Ecotron Research</h2>
     <p>Synthetic biology will require far more public support for applications to be fully realized outside of laboratories. Without funding and public trust, we risk losing tools to tackle environmental problems, ensure safe biotechnologies, and advance space exploration.</p>
-    <p>Learn about the funding needed to establish and operate ecotron facilities:</p>
-    <button id="budgetButton" aria-expanded="false" aria-controls="budgetTable">Brainstorm Budget</button>
-    <div id="budgetTable" class="budget-table" style="display: none;">
-        <table>
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Item</th>
-                    <th>Details</th>
-                    <th>Estimated Cost</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Capital Costs (One-Time)</td>
-                    <td>Ecotron construction</td>
-                    <td>100 units × ~$6.5 million per ecotron (including environmental control, sensors, enclosures)</td>
-                    <td>$650,000,000</td>
-                </tr>
-                <tr>
-                    <td>Capital Costs (One-Time)</td>
-                    <td>Land acquisition</td>
-                    <td>~10 acres of undeveloped land in remote desert (~$16,100 per acre)</td>
-                    <td>$161,000</td>
-                </tr>
-                <tr>
-                    <td>Capital Costs (One-Time)</td>
-                    <td>Multi-use lab, office, classroom, conference space</td>
-                    <td></td>
-                    <td>$200,000,000</td>
-                </tr>
-                <tr class="total">
-                    <td colspan="2">Total Capital Costs (One-Time)</td>
-                    <td></td>
-                    <td>$850,161,000</td>
-                </tr>
-                <tr class="total">
-                    <td colspan="2">Annual Operating Costs (Facility Only)</td>
-                    <td>Utilities, climate systems, maintenance (10% of build cost)</td>
-                    <td>$65,000,000/year</td>
-                </tr>
-                <tr>
-                    <td>Annual Scientific Operations</td>
-                    <td>Personnel</td>
-                    <td>500 employees @ $120,000/year average</td>
-                    <td>$60,000,000/year</td>
-                </tr>
-                <tr>
-                    <td>Annual Scientific Operations</td>
-                    <td>Laboratory analysis</td>
-                    <td>1,200 biospheromic samples/year @ $1,500/sample</td>
-                    <td>$2,160,000/year</td>
-                </tr>
-                <tr>
-                    <td>Annual Scientific Operations</td>
-                    <td>Lab space and overhead</td>
-                    <td>100,000 sq ft × ~$200/sq ft operational costs</td>
-                    <td>$20,000,000/year</td>
-                </tr>
-                <tr>
-                    <td>Annual Scientific Operations</td>
-                    <td>Computing infrastructure</td>
-                    <td>HPC, cloud storage, data processing tools</td>
-                    <td>$2,000,000/year</td>
-                </tr>
-                <tr class="total">
-                    <td colspan="2">Total Annual Scientific Costs</td>
-                    <td>Personnel + lab + computing</td>
-                    <td>$84,160,000/year</td>
-                </tr>
-                <tr class="total">
-                    <td colspan="2">Total Annual Operating Costs</td>
-                    <td>Facility + scientific operations</td>
-                    <td>$149,160,000/year</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <button id="strategyButton" aria-expanded="false" aria-controls="strategySection">3-Tier Strategy</button>
+    <p>Learn about our vision to fund and scale ecotron facilities through a collaborative endowment:</p>
+    <button id="strategyButton" aria-expanded="false" aria-controls="strategySection">3-Tier Strategy & Endowment Plan</button>
     <div id="strategySection" class="budget-table" style="display: none;">
         <h3>Comparative Biospheromics</h3>
-        <h4>A 3-Tier Investment & Partnership Prospectus</h4>
+        <h4>A 3-Tier Investment & Partnership Prospectus with Endowment Fund</h4>
         <h5>Overview</h5>
         <p>Comparative Biospheromics is a new field at the intersection of ecological genomics, synthetic biology, and systems engineering. Its goal is to evaluate the ecological behavior and biosafety of engineered organisms in complex, semi-natural testbed environments called ecotrons. This prospectus outlines a three-tier plan to fund and scale a world-class testing ecosystem based in Tucson, Arizona, leveraging the University of Arizona's land, talent, and position in the heart of one of the most biosafety-conducive landscapes on Earth.</p>
+        <p>A key component of this vision is the establishment of a $500M–$1B endowment fund, created by pooling contributions from multiple private foundations. The revenues from this endowment will sustain the scientific infrastructure, including ecotron facilities, laboratories, and data systems, while attracting top researchers who bring their own grant funding, further amplifying the project's impact.</p>
         <p>This prospectus outlines a vision for collaboration. It is shared here in the hope of finding institutional and individual partners to develop this idea further. This proposal is independent of any current institutional endorsement and does not represent any official position of the University of Arizona. The <a href="https://comparativebiospheromics.org" target="_blank" rel="noopener">Comparative Biospheromics Network</a> welcomes ideas and collaborators committed to safe and forward-looking synthetic biology research.</p>
         <h5>Why the Sonoran Desert?</h5>
         <ul>
@@ -470,18 +392,21 @@
             <li>Begin hosting university partners and early commercial tests.</li>
             <li>Link into NSF, USDA, DOE, and international research funding streams.</li>
         </ul>
-        <h5>Tier 3: Comparative Biospheromics Testing Campus ($100M+ Seed Fund)</h5>
+        <h5>Tier 3: Comparative Biospheromics Testing Campus ($100M+ Seed Fund + Endowment)</h5>
         <ul>
             <li>Develop a 100-acre zone of testbed arrays at multiple scales (micro to field trial).</li>
             <li>Maintain strict biosafety protocols, digital twin data pipelines, and automated monitoring.</li>
             <li>Support global product testing: researchers and startups send engineered biology for performance/biosafety evaluation.</li>
             <li>Generate high-resolution ecological genomics data for industry, science, and regulatory collaboration.</li>
+            <li>Leverage endowment revenues to sustain infrastructure and attract researchers with external funding.</li>
         </ul>
         <h5>Funding Strategy</h5>
         <ul>
-            <li><strong>Government:</strong> Approach NSF, DOE, USDA for ecotron infrastructure and early research.</li>
-            <li><strong>Philanthropy:</strong> Approach Bezos Earth Fund, Open Philanthropy, Moore, Sloan, Gates, and others to seed public-good science and underfunded research.</li>
-            <li><strong>Venture Capital:</strong> Focus on product-specific spinouts (e.g., engineered plants, soil additives) will fund commercialization.</li>
+            <li><strong>Endowment Fund:</strong> Pool contributions from private foundations (e.g., Gates Foundation, Wellcome Trust, Bezos Earth Fund) to create a $500M–$1B endowment. Annual revenues (estimated 4–5% or $20M–$50M/year) will fund facility operations, maintenance, and core staff.</li>
+            <li><strong>Government:</strong> Approach NSF, DOE, USDA for ecotron infrastructure and early research grants.</li>
+            <li><strong>Philanthropy:</strong> Engage additional foundations like Open Philanthropy, Moore, Sloan, and others to seed public-good science and underfunded research.</li>
+            <li><strong>Venture Capital:</strong> Focus on product-specific spinouts (e.g., engineered plants, soil additives) to fund commercialization.</li>
+            <li><strong>Researcher Grants:</strong> Attract top scientists who bring their own funding (e.g., NIH, NSF grants), leveraging the endowment-supported infrastructure.</li>
         </ul>
         <h5>Impact</h5>
         <ul>
@@ -489,6 +414,7 @@
             <li>Protect ecosystems while accelerating synthetic biology innovation.</li>
             <li>Generate public trust and scientific transparency in the age of bioengineering.</li>
             <li>Position a non-profit institute in the Sonoran Desert as a world leader in biosafety and ecological performance science.</li>
+            <li>Sustain long-term research through endowment revenues and external grants.</li>
         </ul>
     </div>
     <hr class="divider">
@@ -574,7 +500,7 @@
         <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faime2solve.github.io%2FEcotronScience" target="_blank" rel="noopener" class="social-icon" aria-label="Share on LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn"></a>
         <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social-icon" aria-label="Open Instagram to share"><img src="icons/instagram.png" alt="Instagram"></a>
     </p>
-    <p><strong>Private foundations that might be persuaded to join the effort:</strong></p>
+    <p><strong>Private foundations that might be persuaded to join the endowment effort:</strong></p>
     <ul>
         <li><a href="https://www.gatesfoundation.org/" target="_blank" rel="noopener">Gates Foundation</a> ($77.2B)</li>
         <li><a href="https://www.wellcome.org/" target="_blank" rel="noopener">Wellcome Trust</a> ($46.4B)</li>
@@ -763,7 +689,7 @@
             { name: "Kevin Cramer", contactUrl: "https://www.cramer.senate.gov/contact/contact-kevin" }
         ],
         OH: [
-            { name: "John Husted", contactUrl: "https://www.husted.senate.gov/contact-jon/" },
+            { name: "Jon Husted", contactUrl: "https://www.husted.senate.gov/contact-jon/" },
             { name: "Bernie Moreno", contactUrl: "https://www.moreno.senate.gov/share-your-opinion/" }
         ],
         OK: [
@@ -849,49 +775,18 @@
         document.getElementById('senatorLinks').innerHTML = linksHtml;
     }
 
-    function toggleBudgetTable() {
-        const table = document.getElementById('budgetTable');
-        const button = document.getElementById('budgetButton');
-        const isHidden = table.style.display === 'none' || table.style.display === '';
-        table.style.display = isHidden ? 'block' : 'none';
-        button.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
-        button.textContent = isHidden ? 'Hide Budget' : 'Brainstorm Budget';
-        // Ensure strategy section is closed when budget is opened
-        const strategySection = document.getElementById('strategySection');
-        const strategyButton = document.getElementById('strategyButton');
-        if (strategySection && !isHidden) {
-            strategySection.style.display = 'none';
-            strategyButton.setAttribute('aria-expanded', 'false');
-            strategyButton.textContent = '3-Tier Strategy';
-        }
-    }
-
     function toggleStrategySection() {
         const section = document.getElementById('strategySection');
         const button = document.getElementById('strategyButton');
         const isHidden = section.style.display === 'none' || section.style.display === '';
         section.style.display = isHidden ? 'block' : 'none';
         button.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
-        button.textContent = isHidden ? 'Hide Strategy' : '3-Tier Strategy';
-        // Ensure budget table is closed when strategy is opened
-        const budgetTable = document.getElementById('budgetTable');
-        const budgetButton = document.getElementById('budgetButton');
-        if (budgetTable && !isHidden) {
-            budgetTable.style.display = 'none';
-            budgetButton.setAttribute('aria-expanded', 'false');
-            budgetButton.textContent = 'Brainstorm Budget';
-        }
+        button.textContent = isHidden ? 'Hide Strategy & Endowment Plan' : '3-Tier Strategy & Endowment Plan';
     }
 
-    // Ensure buttons are initialized and event listeners are attached
+    // Ensure button is initialized and event listener is attached
     document.addEventListener('DOMContentLoaded', () => {
-        const budgetButton = document.getElementById('budgetButton');
         const strategyButton = document.getElementById('strategyButton');
-        if (budgetButton) {
-            budgetButton.addEventListener('click', toggleBudgetTable);
-        } else {
-            console.error('Budget button not found');
-        }
         if (strategyButton) {
             strategyButton.addEventListener('click', toggleStrategySection);
         } else {
